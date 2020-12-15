@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
   spec.description  = "The Amani Software Development kit (SDK) provides you complete steps to perform eKYC."
   spec.homepage     = "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK"
   spec.license      = "Copyright"
+  spec.author       = "Amani"
   spec.platform     = :ios, "4.2"
   spec.source       = { :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => "#{spec.version}"}
   spec.dependency 'Alamofire'
