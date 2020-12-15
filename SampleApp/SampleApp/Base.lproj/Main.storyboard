@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N75-AW-gCS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="kXt-Zh-Bkx">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G6m-Dv-NHN" customClass="ViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="82J-u6-P7N"/>
+                        <viewControllerLayoutGuide type="bottom" id="9E4-Ff-xzA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K4H-Lf-Vav">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xch-0b-r39">
+                                <rect key="frame" x="16" y="461" width="382" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jTt-N7-NKx"/>
+                                </constraints>
+                                <state key="normal" title="Start KYC">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="go:" destination="G6m-Dv-NHN" eventType="touchUpInside" id="tvb-Xi-bRh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyk-42-Oyf">
+                                <rect key="frame" x="16" y="395" width="382" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GDi-Ah-jyT"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jes-a3-vBB">
+                                <rect key="frame" x="16" y="317.5" width="382" height="61"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">If not filled new customer created. If filled with an ID Number old customer used for KYC process so you can see rejection message etc.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Production Server" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS3-kV-aZw">
+                                <rect key="frame" x="16" y="281" width="382" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fyk-42-Oyf" firstAttribute="leading" secondItem="Jes-a3-vBB" secondAttribute="leading" id="1lv-EU-coJ"/>
+                            <constraint firstItem="fyk-42-Oyf" firstAttribute="trailing" secondItem="Jes-a3-vBB" secondAttribute="trailing" id="4hu-Jc-vM1"/>
+                            <constraint firstAttribute="trailing" secondItem="Jes-a3-vBB" secondAttribute="trailing" constant="16" id="5Hg-Ny-m5w"/>
+                            <constraint firstItem="Jes-a3-vBB" firstAttribute="centerY" secondItem="K4H-Lf-Vav" secondAttribute="centerY" constant="-100" id="F72-JL-EZh"/>
+                            <constraint firstItem="fyk-42-Oyf" firstAttribute="top" secondItem="Jes-a3-vBB" secondAttribute="bottom" constant="16.5" id="NiE-4Y-dGY"/>
+                            <constraint firstItem="xch-0b-r39" firstAttribute="top" secondItem="fyk-42-Oyf" secondAttribute="bottom" constant="16" id="P1x-1g-JEm"/>
+                            <constraint firstItem="RS3-kV-aZw" firstAttribute="trailing" secondItem="Jes-a3-vBB" secondAttribute="trailing" id="Q7V-xo-kIA"/>
+                            <constraint firstItem="xch-0b-r39" firstAttribute="trailing" secondItem="Jes-a3-vBB" secondAttribute="trailing" id="RN3-dN-lJL"/>
+                            <constraint firstItem="xch-0b-r39" firstAttribute="leading" secondItem="Jes-a3-vBB" secondAttribute="leading" id="Xiu-FB-OBc"/>
+                            <constraint firstItem="Jes-a3-vBB" firstAttribute="centerX" secondItem="K4H-Lf-Vav" secondAttribute="centerX" id="aA4-uA-19m"/>
+                            <constraint firstItem="Jes-a3-vBB" firstAttribute="top" secondItem="RS3-kV-aZw" secondAttribute="bottom" constant="16" id="h9X-1V-dsF"/>
+                            <constraint firstItem="Jes-a3-vBB" firstAttribute="leading" secondItem="K4H-Lf-Vav" secondAttribute="leading" constant="16" id="ihf-Hz-1dh"/>
+                            <constraint firstItem="RS3-kV-aZw" firstAttribute="leading" secondItem="Jes-a3-vBB" secondAttribute="leading" id="jiY-1z-XsG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AHs-3b-prf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OJl-Zj-HRQ"/>
+                    <connections>
+                        <outlet property="cardNumTextField" destination="fyk-42-Oyf" id="0YZ-5p-SWL"/>
+                        <outlet property="kycBtn" destination="xch-0b-r39" id="Yql-FS-dlA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vtV-WM-gSM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4802.898550724638" y="124.55357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SNB-bI-b3R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N75-AW-gCS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Cx-GN-Ujk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="G6m-Dv-NHN" kind="relationship" relationship="rootViewController" id="rjO-3l-0R8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SsY-Kz-hWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3892.753623188406" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+</document>
