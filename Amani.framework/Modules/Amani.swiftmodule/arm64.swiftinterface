@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 effective-4.2 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -Onone -module-name Amani
 import AVFoundation
 import Alamofire
@@ -110,18 +110,18 @@ public struct ResponseAPDU {
   public var sw2: Swift.UInt8
   public init(data: [Swift.UInt8], sw1: Swift.UInt8, sw2: Swift.UInt8)
 }
-@available(iOS 13, *)
+@_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class TagReader {
   @objc deinit
 }
 public enum CertificateType {
   case documentSigningCertificate
   case issuerSigningCertificate
+  public static func == (a: Amani.CertificateType, b: Amani.CertificateType) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: Amani.CertificateType, b: Amani.CertificateType) -> Swift.Bool
 }
 public enum CertificateItem : Swift.String {
   case fingerprint
@@ -172,8 +172,8 @@ public class PassportReader : ObjectiveC.NSObject {
   public init(masterListURL: Foundation.URL? = nil)
   public func setMasterListURL(_ masterListURL: Foundation.URL)
   public func readPassport(mrzKey: Swift.String, tags: [Amani.DataGroupId] = [], skipSecureElements: Swift.Bool = true, customDisplayMessage: ((Amani.NFCViewDisplayMessage) -> Swift.String?)? = nil, completed: @escaping (Amani.NFCPassportModel?, Amani.TagError?) -> ())
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
 @available(iOS 13, *)
 extension PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
@@ -259,28 +259,28 @@ public class NFCPassportModel {
   }
   public var dataGroupsAvailable: [Amani.DataGroupId] {
     get
-    }
+  }
   public var dataGroupsRead: [Amani.DataGroupId : Amani.DataGroup] {
     get
-    }
+  }
   public var dataGroupHashes: [Amani.DataGroupId : Amani.DataGroupHash] {
     get
-    }
+  }
   public var passportCorrectlySigned: Swift.Bool {
     get
-    }
+  }
   public var documentSigningCertificateVerified: Swift.Bool {
     get
-    }
+  }
   public var passportDataNotTampered: Swift.Bool {
     get
-    }
+  }
   public var activeAuthenticationPassed: Swift.Bool {
     get
-    }
+  }
   public var verificationErrors: [Swift.Error] {
     get
-    }
+  }
   public var passportImage: UIKit.UIImage? {
     get
   }
@@ -310,7 +310,7 @@ public enum LogLevel : Swift.Int {
     get
   }
 }
-public class Log {
+@_hasMissingDesignatedInitializers public class Log {
   public static var logLevel: Amani.LogLevel
   public class func verbose(_ msg: Swift.String)
   public class func debug(_ msg: Swift.String)
@@ -350,10 +350,14 @@ public class SecureMessaging {
   public init(ksenc: [Swift.UInt8], ksmac: [Swift.UInt8], ssc: [Swift.UInt8])
   @objc deinit
 }
-@objc final public class AmaniSDK : ObjectiveC.NSObject {
+public protocol AmaniSDKDelegate : AnyObject {
+  func onKYCSuccess(CustomerId: Swift.Int)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class AmaniSDK : ObjectiveC.NSObject {
   public static var sharedInstance: Amani.AmaniSDK
   final public func set(server: Swift.String = "https://demo.amani.ai", userName: Swift.String = "demo@zorluenerji.com", password: Swift.String = "123456", customer: Amani.CustomerRequestModel)
   final public func showSDK(overParent parentViewController: UIKit.UIViewController)
+  final public func setDelegate(delegate: Amani.AmaniSDKDelegate)
   @objc deinit
 }
 public struct ClientInfoModel {
@@ -363,199 +367,199 @@ public struct ClientInfoModel {
   public var customer: Amani.CustomerRequestModel!
   public init(serverURL: Swift.String, appKey: Swift.String, appPwd: Swift.String, customer: Amani.CustomerRequestModel)
 }
-@available(iOS 13, *)
+@_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class DataGroup {
   public var datagroupType: Amani.DataGroupId
   public var body: [Swift.UInt8] {
     get
-    }
+  }
   public func hash(_ hashAlgorythm: Swift.String) -> [Swift.UInt8]
   @objc deinit
 }
-@available(iOS 13, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class NotImplementedDG : Amani.DataGroup {
   @objc deinit
 }
-@available(iOS 13, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class COM : Amani.DataGroup {
   public var version: Swift.String {
     get
-    }
+  }
   public var unicodeVersion: Swift.String {
     get
-    }
+  }
   public var dataGroupsPresent: [Swift.String] {
     get
-    }
+  }
   @objc deinit
 }
-@available(iOS 13, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class DataGroup1 : Amani.DataGroup {
   public var elements: [Swift.String : Swift.String] {
     get
-    }
+  }
   @objc deinit
 }
-@available(iOS 13, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class DataGroup2 : Amani.DataGroup {
   public var nrImages: Swift.Int {
     get
-    }
+  }
   public var versionNumber: Swift.Int {
     get
-    }
+  }
   public var lengthOfRecord: Swift.Int {
     get
-    }
+  }
   public var numberOfFacialImages: Swift.Int {
     get
-    }
+  }
   public var facialRecordDataLength: Swift.Int {
     get
-    }
+  }
   public var nrFeaturePoints: Swift.Int {
     get
-    }
+  }
   public var gender: Swift.Int {
     get
-    }
+  }
   public var eyeColor: Swift.Int {
     get
-    }
+  }
   public var hairColor: Swift.Int {
     get
-    }
+  }
   public var featureMask: Swift.Int {
     get
-    }
+  }
   public var expression: Swift.Int {
     get
-    }
+  }
   public var poseAngle: Swift.Int {
     get
-    }
+  }
   public var poseAngleUncertainty: Swift.Int {
     get
-    }
+  }
   public var faceImageType: Swift.Int {
     get
-    }
+  }
   public var imageDataType: Swift.Int {
     get
-    }
+  }
   public var imageWidth: Swift.Int {
     get
-    }
+  }
   public var imageHeight: Swift.Int {
     get
-    }
+  }
   public var imageColorSpace: Swift.Int {
     get
-    }
+  }
   public var sourceType: Swift.Int {
     get
-    }
+  }
   public var deviceType: Swift.Int {
     get
-    }
+  }
   public var quality: Swift.Int {
     get
-    }
+  }
   public var imageData: [Swift.UInt8] {
     get
-    }
+  }
   @objc deinit
 }
-@available(iOS 13, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class DataGroup7 : Amani.DataGroup {
   public var imageData: [Swift.UInt8] {
     get
-    }
+  }
   @objc deinit
 }
-@available(iOS 13, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class DataGroup11 : Amani.DataGroup {
   public var fullName: Swift.String? {
     get
-    }
+  }
   public var personalNumber: Swift.String? {
     get
-    }
+  }
   public var dateOfBirth: Swift.String? {
     get
-    }
+  }
   public var placeOfBirth: Swift.String? {
     get
-    }
+  }
   public var address: Swift.String? {
     get
-    }
+  }
   public var telephone: Swift.String? {
     get
-    }
+  }
   public var profession: Swift.String? {
     get
-    }
+  }
   public var title: Swift.String? {
     get
-    }
+  }
   public var personalSummary: Swift.String? {
     get
-    }
+  }
   public var proofOfCitizenship: Swift.String? {
     get
-    }
+  }
   public var tdNumbers: Swift.String? {
     get
-    }
+  }
   public var custodyInfo: Swift.String? {
     get
-    }
+  }
   @objc deinit
 }
-@available(iOS 13, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class DataGroup12 : Amani.DataGroup {
   public var issuingAuthority: Swift.String? {
     get
-    }
+  }
   public var dateOfIssue: Swift.String? {
     get
-    }
+  }
   public var otherPersonsDetails: Swift.String? {
     get
-    }
+  }
   public var endorsementsOrObservations: Swift.String? {
     get
-    }
+  }
   public var taxOrExitRequirements: Swift.String? {
     get
-    }
+  }
   public var frontImage: [Swift.UInt8]? {
     get
-    }
+  }
   public var rearImage: [Swift.UInt8]? {
     get
-    }
+  }
   public var personalizationTime: Swift.String? {
     get
-    }
+  }
   public var personalizationDeviceSerialNr: Swift.String? {
     get
-    }
+  }
   @objc deinit
 }
-@available(iOS 13, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class DataGroup14 : Amani.DataGroup {
   @objc deinit
 }
-@available(iOS 13, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class DataGroup15 : Amani.DataGroup {
   public var rsaPublicKey: Swift.OpaquePointer? {
     get
-    }
+  }
   public var ecdsaPublicKey: Swift.UnsafeMutablePointer<OpenSSL.EVP_PKEY>? {
     get
-    }
+  }
   @objc deinit
 }
 @available(iOS 13, *)

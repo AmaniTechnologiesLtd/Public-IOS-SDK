@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "Amani"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "Amani-SDK"
   spec.description  = "The Amani Software Development kit (SDK) provides you complete steps to perform eKYC."
   spec.homepage     = "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK"
@@ -23,6 +23,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'iProgressHUD'
   spec.dependency 'IQKeyboardManagerSwift'
   spec.dependency "OpenSSL-Universal/Framework"
+
   spec.ios.deployment_target = '11.0'
   spec.vendored_frameworks = 'Amani.framework'
   
