@@ -117,9 +117,7 @@ class ViewController: UIViewController {
 
 # Installation
 https://tr.amani.ai/library/openCV2.zip download and unzip openCV2 library near your podfile. 
-There is openCV2 folder contains 
-	opencv2.framework folder
-	OpenCV2.podspec file
+There is openCV2 folder contains opencv2.framework folder and OpenCV2.podspec file 
 If your unzip step unzips opencv2.framework folder and OpenCV2.podspec file not in a "openCV2" folder then create folder and put them in it.
 
 ## Via CocoaPods
