@@ -149,7 +149,7 @@ Then, run the following command:
 $ pod install
 ```
 
-Getting Results 
+## Getting Results 
 
 ###### Swift
 
