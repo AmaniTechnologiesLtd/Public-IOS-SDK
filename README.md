@@ -148,3 +148,15 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
+
+Getting Results 
+
+###### Swift
+
+```swift
+extension ViewController:AmaniSDKDelegate{
+    func onKYCSuccess(CustomerId: Int) {
+        ....
+    }
+}
+```
