@@ -130,6 +130,18 @@ use_frameworks!
   pod 'OpenCV2', :path => "openCV2"
   pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => '1.0.3'
 ```
+also add after last end statement of podfile 
+
+```ruby
+#add following lines end of podfile after last 'end'
+post_install do |installer|
+	installer.pods_project.targets.each do |target|
+	  target.build_configurations.each do |config|
+	    config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+	  end
+	end
+end
+```
 
 Then, run the following command:
 
