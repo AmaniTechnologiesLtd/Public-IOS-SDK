@@ -156,7 +156,7 @@ Getting Results
 ```swift
 extension ViewController:AmaniSDKDelegate{
     func onKYCSuccess(CustomerId: Int) {
-        ....
+        //do whatever when customer approved
     }
 }
 ```
