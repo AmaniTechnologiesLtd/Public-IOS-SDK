@@ -105,6 +105,8 @@ class ViewController: UIViewController {
         let amaniSDK = AmaniSDK.sharedInstance
 	// Configure SDK 
         amaniSDK.set(server: "SERVER_URL", userName: "USER_NAME", password: "PASSWORD", customer: customerModel)
+	amaniSDK.setDelegate(delegate: self)
+
 	// Start SDK 
         amaniSDK.showSDK(overParent: self)
     }
