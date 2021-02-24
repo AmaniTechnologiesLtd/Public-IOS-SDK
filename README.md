@@ -132,7 +132,7 @@ Install using [CocoaPods](http://cocoapods.org) by adding this line to your Podf
 ```ruby
 use_frameworks!
   pod 'OpenCV2', :path => "openCV2"
-  pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => '1.0.3'
+  pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => '1.0.4'
 ```
 also add after last end statement of podfile 
 
