@@ -86,6 +86,8 @@ Enable the Near Field Communication Tag Reading capability in the target Signing
 ## Integration
 
 ##### Example Usage
+Add Navigation Controller from XCode menu in Editor -> Embed in -> Navigation Controller
+After embedded in then call our sdk
 
 ##### Swift
 
@@ -104,8 +106,8 @@ class ViewController: UIViewController {
 	// Initialize SDK 
         let amaniSDK = AmaniSDK.sharedInstance
 	// Configure SDK 
-        amaniSDK.set(server: "SERVER_URL", userName: "USER_NAME", password: "PASSWORD", customer: customerModel)
 	amaniSDK.setDelegate(delegate: self)
+	amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer)
 
 	// Start SDK 
         amaniSDK.showSDK(overParent: self)
@@ -159,6 +161,12 @@ $ pod install
 extension ViewController:AmaniSDKDelegate{
     func onKYCSuccess(CustomerId: Int) {
         //do whatever when customer approved
+    }
+    func onKYCFailed(CustomerId: Int, Rules: [[String : String]]?) {
+        // Returns uncompleted fields
+    }
+    func onTokenExpired() {
+    	// returns when token expired. Token needs to be refreshed and restart instance 
     }
 }
 ```
