@@ -352,10 +352,13 @@ public class SecureMessaging {
 }
 public protocol AmaniSDKDelegate : AnyObject {
   func onKYCSuccess(CustomerId: Swift.Int)
+  func onKYCFailed(CustomerId: Swift.Int, Rules: [[Swift.String : Swift.String]]?)
+  func onTokenExpired()
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class AmaniSDK : ObjectiveC.NSObject {
   public static var sharedInstance: Amani.AmaniSDK
-  final public func set(server: Swift.String = "https://demo.amani.ai", userName: Swift.String = "demo@zorluenerji.com", password: Swift.String = "123456", customer: Amani.CustomerRequestModel)
+  final public func set(server: Swift.String = "https://demo.amani.ai", userName: Swift.String = "mobile_team@amani.ai", password: Swift.String = "vUcxPvfvP9rYUJ", customer: Amani.CustomerRequestModel)
+  final public func set(server: Swift.String = "https://demo.amani.ai", token: Swift.String, customer: Amani.CustomerRequestModel)
   final public func showSDK(overParent parentViewController: UIKit.UIViewController)
   final public func setDelegate(delegate: Amani.AmaniSDKDelegate)
   @objc deinit
@@ -364,8 +367,10 @@ public struct ClientInfoModel {
   public var serverURL: Swift.String!
   public var appKey: Swift.String!
   public var appPwd: Swift.String!
+  public var appToken: Swift.String!
   public var customer: Amani.CustomerRequestModel!
   public init(serverURL: Swift.String, appKey: Swift.String, appPwd: Swift.String, customer: Amani.CustomerRequestModel)
+  public init(serverURL: Swift.String, appToken: Swift.String, customer: Amani.CustomerRequestModel)
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class DataGroup {

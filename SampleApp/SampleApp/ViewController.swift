@@ -38,7 +38,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         let customerModel = CustomerRequestModel(name: "", email: "", phone: "", idCardNumber: cardNumTextField.text ?? "")
         let amaniSDK = AmaniSDK.sharedInstance
-        amaniSDK.set(server: "https://demo.amani.ai", userName: "demo@zorluenerji.com", password: "123456", customer: customerModel)
+        amaniSDK.set(server: "https://demo.amani.ai", userName: "demo@uae.com", password: "123456", customer:customerModel )
+
+//        amaniSDK.set(server: "https://demo.amani.ai", userName: "demo@zorluenerji.com", password: "123456", customer: customerModel)
         amaniSDK.showSDK(overParent: self)
     }
     
