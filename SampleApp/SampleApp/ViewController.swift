@@ -36,11 +36,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Submit Button
     @IBAction func go(_ sender: Any) {
         self.view.endEditing(true)
-        let customerModel = CustomerRequestModel(name: "", email: "", phone: "", idCardNumber: cardNumTextField.text ?? "")
+        let customer = CustomerRequestModel(name: "", email: "", phone: "", idCardNumber: cardNumTextField.text ?? "")
         let amaniSDK = AmaniSDK.sharedInstance
-        amaniSDK.set(server: "https://demo.amani.ai", userName: "demo@uae.com", password: "123456", customer:customerModel )
 
-//        amaniSDK.set(server: "https://demo.amani.ai", userName: "demo@zorluenerji.com", password: "123456", customer: customerModel)
+        amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer)
+        amaniSDK.setDelegate(delegate: self)
+
         amaniSDK.showSDK(overParent: self)
     }
     
@@ -79,4 +80,19 @@ extension UIViewController {
     @objc func keyboardDismiss() {
         view.endEditing(true)
     }
+}
+extension ViewController:AmaniSDKDelegate {
+    func onKYCSuccess(CustomerId: Int) {
+        
+    }
+    
+    func onKYCFailed(CustomerId: Int, Rules: [[String : String]]?) {
+        
+    }
+    
+    func onTokenExpired() {
+        
+    }
+    
+    
 }
