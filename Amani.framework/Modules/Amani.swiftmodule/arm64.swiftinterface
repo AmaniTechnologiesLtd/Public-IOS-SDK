@@ -298,6 +298,9 @@ public class NFCPassportModel {
   public func verifyActiveAuthentication(challenge: [Swift.UInt8], signature: [Swift.UInt8])
   @objc deinit
 }
+extension UIViewController : UIKit.UINavigationControllerDelegate {
+  @objc dynamic public func navigationControllerSupportedInterfaceOrientations(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientationMask
+}
 public enum LogLevel : Swift.Int {
   case verbose
   case debug
@@ -318,6 +321,11 @@ public enum LogLevel : Swift.Int {
   public class func warning(_ msg: Swift.String)
   public class func error(_ msg: Swift.String)
   @objc deinit
+}
+extension UINavigationController {
+  @objc override dynamic open var shouldAutorotate: Swift.Bool {
+    @objc get
+  }
 }
 public func binToHexRep(_ val: [Swift.UInt8]) -> Swift.String
 public func binToHexRep(_ val: Swift.UInt8) -> Swift.String

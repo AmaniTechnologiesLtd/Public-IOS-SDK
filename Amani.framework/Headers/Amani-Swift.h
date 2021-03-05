@@ -189,6 +189,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import ObjectiveC;
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -234,9 +235,19 @@ SWIFT_CLASS("_TtC5Amani14PassportReader") SWIFT_AVAILABILITY(ios,introduced=13)
 
 
 
+@interface UINavigationController (SWIFT_EXTENSION(Amani))
+@property (nonatomic, readonly) BOOL shouldAutorotate;
+@end
 
 
 
+
+
+
+
+@interface UIViewController (SWIFT_EXTENSION(Amani)) <UINavigationControllerDelegate>
+- (UIInterfaceOrientationMask)navigationControllerSupportedInterfaceOrientations:(UINavigationController * _Nonnull)navigationController SWIFT_WARN_UNUSED_RESULT;
+@end
 
 
 #if __has_attribute(external_source_symbol)
