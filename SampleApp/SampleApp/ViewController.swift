@@ -37,13 +37,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func go(_ sender: Any) {
         self.view.endEditing(true)
         let customer = CustomerRequestModel(name: "", email: "", phone: "", idCardNumber: cardNumTextField.text ?? "")
-        let nviData = NviModel(documentNo: "DocumentNo", dateOfBirth: "YYMMDD", dateOfExpire: "YYMMDD")
         let amaniSDK = AmaniSDK.sharedInstance
 
         amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer)
         /*
          for use nfcOnly option you need to provide nviData
          */
+//        let nviData = NviModel(documentNo: "DocumentNo", dateOfBirth: "YYMMDD", dateOfExpire: "YYMMDD")
 //        amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer,nvi:nvidata)
 
         amaniSDK.setDelegate(delegate: self)
