@@ -7,7 +7,6 @@ target 'SampleApp' do
 
   # Pods for SampleApp
   pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git'
-  pod 'OpenCV2', :path => "SDK/openCV2"
 
 end
 post_install do |installer|

@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char AmaniVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Amani/PublicHeader.h>
 
-#import <Amani/CvVideoCameraWrapper.h>
+//#import <Amani/CvVideoCameraWrapper.h>
