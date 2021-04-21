@@ -4,3 +4,4 @@ SampleApp/.DS_Store
 SampleApp/Podfile.lock
 SampleApp/Pods/*
 SampleApp/SDK/*
+.DS_Store

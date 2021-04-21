@@ -37,9 +37,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func go(_ sender: Any) {
         self.view.endEditing(true)
         let customer = CustomerRequestModel(name: "", email: "", phone: "", idCardNumber: cardNumTextField.text ?? "")
+        let nviData = NviModel(documentNo: "DocumentNo", dateOfBirth: "YYMMDD", dateOfExpire: "YYMMDD")
         let amaniSDK = AmaniSDK.sharedInstance
 
         amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer)
+        /*
+         for use nfcOnly option you need to provide nviData
+         */
+//        amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer,nvi:nvidata)
+
         amaniSDK.setDelegate(delegate: self)
 
         amaniSDK.showSDK(overParent: self)
@@ -54,7 +60,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
-        toolBar.tintColor = .black
+        toolBar.tintColor = .blue
         toolBar.sizeToFit()
 
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.donePressOnPicker))
@@ -66,6 +72,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @objc func donePressOnPicker() {
         self.view.endEditing(true)
+        go(self)
     }
 }
 
