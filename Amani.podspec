@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   spec.dependency "OpenSSL-Universal"
   spec.dependency "lottie-ios"
 
-  spec.ios.deployment_target = '11.0'
+  spec.ios.deployment_target = '10.0'
   spec.vendored_frameworks = 'Amani.framework'
   
 
