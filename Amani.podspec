@@ -23,6 +23,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'iProgressHUD'
   spec.dependency 'IQKeyboardManagerSwift'
   spec.dependency "OpenSSL-Universal"
+  spec.dependency "lottie-ios"
 
   spec.ios.deployment_target = '11.0'
   spec.vendored_frameworks = 'Amani.framework'
