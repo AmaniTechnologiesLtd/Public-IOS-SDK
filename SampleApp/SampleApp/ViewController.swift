@@ -5,6 +5,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var cardNumTextField: UITextField!
     @IBOutlet weak var kycBtn: UIButton!
+    @IBOutlet weak var lbl1: UILabel!
+    @IBOutlet weak var lbl2: UILabel!
+    
+    let backgroundColor:UIColor = #colorLiteral(red: 0.1450980392, green: 0.2352941176, blue: 0.3490196078, alpha: 1)
+    let foregroundColor:UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -19,7 +24,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - Initial Setup for UI
     func initialSetup() {
-        self.view.backgroundColor = #colorLiteral(red: 0.1450980392, green: 0.2352941176, blue: 0.3490196078, alpha: 1)
+        self.view.backgroundColor = backgroundColor
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.05882352941, green: 0.1411764706, blue: 0.2078431373, alpha: 1)
         cardNumTextField.inputAccessoryView = setToolBar()
         cardNumTextField.attributedPlaceholder = NSAttributedString(string: "TCK ID Number",
@@ -28,6 +33,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         cardNumTextField.layer.borderColor = UIColor.white.cgColor
         kycBtn.layer.cornerRadius = 10
         kycBtn.clipsToBounds = true
+        lbl1.textColor = foregroundColor
+        lbl2.textColor = foregroundColor
         cardNumTextField.layer.cornerRadius = 10
         cardNumTextField.clipsToBounds = true
         self.dismissKeyboard()
@@ -37,7 +44,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func go(_ sender: Any) {
         self.view.endEditing(true)
         let customer = CustomerRequestModel(name: "", email: "", phone: "", idCardNumber: cardNumTextField.text ?? "")
-        let amaniSDK = AmaniSDK.sharedInstance
+        if #available(iOS 11, *) {
+            let amaniSDK = AmaniSDK.sharedInstance
+ 
 
         amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer)
         /*
@@ -49,6 +58,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         amaniSDK.setDelegate(delegate: self)
 
         amaniSDK.showSDK(overParent: self)
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

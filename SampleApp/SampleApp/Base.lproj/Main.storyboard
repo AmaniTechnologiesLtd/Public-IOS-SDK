@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N75-AW-gCS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N75-AW-gCS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xch-0b-r39">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xch-0b-r39">
                                 <rect key="frame" x="16" y="461" width="382" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -59,6 +60,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="AHs-3b-prf"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fyk-42-Oyf" firstAttribute="leading" secondItem="Jes-a3-vBB" secondAttribute="leading" id="1lv-EU-coJ"/>
@@ -75,12 +77,13 @@
                             <constraint firstItem="Jes-a3-vBB" firstAttribute="leading" secondItem="K4H-Lf-Vav" secondAttribute="leading" constant="16" id="ihf-Hz-1dh"/>
                             <constraint firstItem="RS3-kV-aZw" firstAttribute="leading" secondItem="Jes-a3-vBB" secondAttribute="leading" id="jiY-1z-XsG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="AHs-3b-prf"/>
                     </view>
                     <navigationItem key="navigationItem" id="OJl-Zj-HRQ"/>
                     <connections>
                         <outlet property="cardNumTextField" destination="fyk-42-Oyf" id="0YZ-5p-SWL"/>
                         <outlet property="kycBtn" destination="xch-0b-r39" id="Yql-FS-dlA"/>
+                        <outlet property="lbl1" destination="Jes-a3-vBB" id="UQU-GL-eBy"/>
+                        <outlet property="lbl2" destination="RS3-kV-aZw" id="nvS-m7-sOF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtV-WM-gSM" sceneMemberID="firstResponder"/>
