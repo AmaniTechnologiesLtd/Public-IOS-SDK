@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 effective-4.2 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
-// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name Amani
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Amani
 import AVFoundation
 import Accelerate
 import Alamofire
@@ -28,10 +28,10 @@ public struct CustomerRequestModel : Swift.Codable {
   public var phone: Swift.String?
   public var idCardNumber: Swift.String?
   public init(name: Swift.String, email: Swift.String, phone: Swift.String, idCardNumber: Swift.String)
-  public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class DataGroup11 : Amani.DataGroup {
   public var fullName: Swift.String? {
     get
@@ -71,7 +71,7 @@ public class DataGroup11 : Amani.DataGroup {
   }
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class DataGroup {
   public var datagroupType: Amani.DataGroupId
   public var body: [Swift.UInt8] {
@@ -93,8 +93,8 @@ public class PassportReader : ObjectiveC.NSObject {
   public func setMasterListURL(_ masterListURL: Foundation.URL)
   public func overrideNFCDataAmountToRead(amount: Swift.Int)
   public func readPassport(mrzKey: Swift.String, tags: [Amani.DataGroupId] = [], skipSecureElements: Swift.Bool = true, customDisplayMessage: ((Amani.NFCViewDisplayMessage) -> Swift.String?)? = nil, completed: @escaping (Amani.NFCPassportModel?, Amani.NFCPassportReaderError?) -> ())
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
 @available(iOS 13, *)
 extension PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
@@ -102,14 +102,14 @@ extension PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
   public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didInvalidateWithError error: Swift.Error)
   public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didDetect tags: [CoreNFC.NFCTag])
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class DataGroup7 : Amani.DataGroup {
   public var imageData: [Swift.UInt8] {
     get
   }
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class SecurityInfo {
   public func getObjectIdentifier() -> Swift.String
   public func getProtocolOIDString() -> Swift.String
@@ -119,7 +119,7 @@ public class SecurityInfo {
   public func blurCheck(image: CoreGraphics.CGImage, blurVariance: Swift.Int = 5) -> Swift.Bool
   @objc deinit
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public struct DataGroupHash {
   public var id: Swift.String
   public var sodHash: Swift.String
@@ -135,30 +135,30 @@ public struct NviModel : Swift.Codable {
   public var dateOfExpireCD: Swift.String?
   public init(documentNo: Swift.String, dateOfBirth: Swift.String, dateOfExpire: Swift.String)
   public func getMRZ() -> Swift.String
-  public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
-@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class OpenSSLUtils {
   public static func getOpenSSLError() -> Swift.String
-  @available(iOS 13, macOS 10.15, *)
+  @available(iOS 13, OSX 10.15, *)
   public static func getPublicKeyData(from key: Swift.OpaquePointer) -> [Swift.UInt8]?
-  @available(iOS 13, macOS 10.15, *)
+  @available(iOS 13, OSX 10.15, *)
   public static func decodePublicKeyFromBytes(pubKeyData: [Swift.UInt8], params: Swift.OpaquePointer) -> Swift.OpaquePointer?
   public static func computeSharedSecret(privateKeyPair: Swift.OpaquePointer, publicKey: Swift.OpaquePointer) -> [Swift.UInt8]
   @objc deinit
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public enum CertificateType {
   case documentSigningCertificate
   case issuerSigningCertificate
   public static func == (a: Amani.CertificateType, b: Amani.CertificateType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public enum CertificateItem : Swift.String {
   case fingerprint
   case issuerName
@@ -168,13 +168,13 @@ public enum CertificateItem : Swift.String {
   case publicKeyAlgorithm
   case notBefore
   case notAfter
-  public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
   public var rawValue: Swift.String {
     get
   }
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public class X509Wrapper {
   final public let cert: Swift.OpaquePointer
   public init?(with cert: Swift.OpaquePointer?)
@@ -190,7 +190,7 @@ public class X509Wrapper {
   public func getSubjectName() -> Swift.String?
   @objc deinit
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public enum DataGroupId : Swift.Int, Swift.CaseIterable {
   case COM
   case DG1
@@ -213,17 +213,17 @@ public enum DataGroupId : Swift.Int, Swift.CaseIterable {
   case Unknown
   public func getName() -> Swift.String
   public static func getIDFromName(name: Swift.String) -> Amani.DataGroupId
-  public init?(rawValue: Swift.Int)
-  public typealias AllCases = [Amani.DataGroupId]
   public typealias RawValue = Swift.Int
-  public static var allCases: [Amani.DataGroupId] {
-    get
-  }
+  public init?(rawValue: Swift.Int)
   public var rawValue: Swift.Int {
     get
   }
+  public typealias AllCases = [Amani.DataGroupId]
+  public static var allCases: [Amani.DataGroupId] {
+    get
+  }
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public class ASN1Item : Swift.CustomDebugStringConvertible {
   public init(line: Swift.String)
   public func getChild(_ child: Swift.Int) -> Amani.ASN1Item?
@@ -233,7 +233,7 @@ public class ASN1Item : Swift.CustomDebugStringConvertible {
   }
   @objc deinit
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public class SimpleASN1DumpParser {
   public init()
   public func parse(data: Foundation.Data) throws -> Amani.ASN1Item
@@ -246,7 +246,7 @@ public class PACEHandler {
   public func doPACE(mrzKey: Swift.String, completed: @escaping (Swift.Bool) -> ())
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class DataGroup2 : Amani.DataGroup {
   public var nrImages: Swift.Int {
     get
@@ -316,7 +316,7 @@ public class DataGroup2 : Amani.DataGroup {
   }
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class ChipAuthenticationInfo : Amani.SecurityInfo {
   override public func getObjectIdentifier() -> Swift.String
   override public func getProtocolOIDString() -> Swift.String
@@ -331,32 +331,32 @@ extension UINavigationController {
     @objc get
   }
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public enum DocTypeEnum : Swift.String {
   case TD1
   case TD2
   case OTHER
-  public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
   public var rawValue: Swift.String {
     get
   }
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class DataGroup1 : Amani.DataGroup {
   public var elements: [Swift.String : Swift.String] {
     get
   }
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class ChipAuthenticationPublicKeyInfo : Amani.SecurityInfo {
   override public func getObjectIdentifier() -> Swift.String
   override public func getProtocolOIDString() -> Swift.String
   public func getKeyId() -> Swift.Int
   @objc deinit
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public enum NFCViewDisplayMessage {
   case requestPresentPassport
   case authenticatingWithPassport(Swift.Int)
@@ -364,7 +364,7 @@ public enum NFCViewDisplayMessage {
   case error(Amani.NFCPassportReaderError)
   case successfulRead
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension NFCViewDisplayMessage {
   public var description: Swift.String {
     get
@@ -388,36 +388,36 @@ public func xor(_ kifd: [Swift.UInt8], _ response_kicc: [Swift.UInt8]) -> [Swift
 public func generateRandomUInt8Array(_ size: Swift.Int) -> [Swift.UInt8]
 public func pad(_ toPad: [Swift.UInt8], blockSize: Swift.Int) -> [Swift.UInt8]
 public func unpad(_ tounpad: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func mac(algoName: Amani.SecureMessagingSupportedAlgorithms, key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func desMAC(key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func aesMAC(key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func wrapDO(b: Swift.UInt8, arr: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func unwrapDO(tag: Swift.UInt8, wrappedData: [Swift.UInt8]) throws -> [Swift.UInt8]
 public func intToBytes(val: Swift.Int, removePadding: Swift.Bool) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func oidToBytes(oid: Swift.String, replaceTag: Swift.Bool) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func asn1Length(_ data: Swift.ArraySlice<Swift.UInt8>) throws -> (Swift.Int, Swift.Int)
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func asn1Length(_ data: [Swift.UInt8]) throws -> (Swift.Int, Swift.Int)
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func toAsn1Length(_ data: Swift.Int) throws -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func calcHash(data: [Swift.UInt8], hashAlgorithm: Swift.String) throws -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func calcSHA1Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func calcSHA224Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func calcSHA256Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func calcSHA512Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func calcSHA384Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
 @available(iOS 13, *)
 public struct ResponseAPDU {
@@ -426,11 +426,11 @@ public struct ResponseAPDU {
   public var sw2: Swift.UInt8
   public init(data: [Swift.UInt8], sw1: Swift.UInt8, sw2: Swift.UInt8)
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class NotImplementedDG : Amani.DataGroup {
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class DataGroup15 : Amani.DataGroup {
   public var rsaPublicKey: Swift.OpaquePointer? {
     get
@@ -440,31 +440,31 @@ public class DataGroup15 : Amani.DataGroup {
   }
   @objc deinit
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func AESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func AESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func AESECBEncrypt(key: [Swift.UInt8], message: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func tripleDESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func tripleDESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func DESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8], options: Swift.UInt32 = 0) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public func DESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8], options: Swift.UInt32 = 0) -> [Swift.UInt8]
 public enum PACEMappingType {
   case GM
   case IM
   case CAM
   public static func == (a: Amani.PACEMappingType, b: Amani.PACEMappingType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
 }
-@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class PACEInfo : Amani.SecurityInfo {
   public static let PARAM_ID_GFP_1024_160: Swift.Int
   public static let PARAM_ID_GFP_2048_224: Swift.Int
@@ -499,7 +499,7 @@ public class PACEInfo : Amani.SecurityInfo {
   public static func toKeyLength(oid: Swift.String) throws -> Swift.Int
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class CardAccess {
   public var securityInfos: [Amani.SecurityInfo] {
     get
@@ -510,17 +510,17 @@ public enum SecureMessagingSupportedAlgorithms {
   case DES
   case AES
   public static func == (a: Amani.SecureMessagingSupportedAlgorithms, b: Amani.SecureMessagingSupportedAlgorithms) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
 }
 @available(iOS 13, *)
 public class SecureMessaging {
   public init(encryptionAlgorithm: Amani.SecureMessagingSupportedAlgorithms = .DES, ksenc: [Swift.UInt8], ksmac: [Swift.UInt8], ssc: [Swift.UInt8])
   @objc deinit
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public enum NFCPassportReaderError : Swift.Error {
   case ResponseError(Swift.String, Swift.UInt8, Swift.UInt8)
   case InvalidResponse
@@ -548,13 +548,13 @@ public enum NFCPassportReaderError : Swift.Error {
   case InvalidDataPassed(Swift.String)
   case NotYetSupported(Swift.String)
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension NFCPassportReaderError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public enum OpenSSLError : Swift.Error {
   case UnableToGetX509CertificateFromPKCS7(Swift.String)
   case UnableToVerifyX509CertificateForSOD(Swift.String)
@@ -565,7 +565,7 @@ public enum OpenSSLError : Swift.Error {
   case UnableToParseASN1(Swift.String)
   case UnableToDecryptRSASignature(Swift.String)
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension OpenSSLError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
@@ -582,8 +582,8 @@ extension PassiveAuthenticationError : Foundation.LocalizedError {
   }
 }
 public struct CustomerDetailModel : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 public protocol AmaniSDKDelegate : AnyObject {
   func onKYCSuccess(CustomerId: Swift.Int)
@@ -605,13 +605,13 @@ public enum LogLevel : Swift.Int, Swift.CaseIterable {
   case info
   case warning
   case error
-  public init?(rawValue: Swift.Int)
-  public typealias AllCases = [Amani.LogLevel]
   public typealias RawValue = Swift.Int
-  public static var allCases: [Amani.LogLevel] {
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
     get
   }
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [Amani.LogLevel]
+  public static var allCases: [Amani.LogLevel] {
     get
   }
 }
@@ -638,7 +638,7 @@ public class BACHandler {
   public func sessionKeys(data: [Swift.UInt8]) throws -> ([Swift.UInt8], [Swift.UInt8], [Swift.UInt8])
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class COM : Amani.DataGroup {
   public var version: Swift.String {
     get
@@ -651,7 +651,7 @@ public class COM : Amani.DataGroup {
   }
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class DataGroup12 : Amani.DataGroup {
   public var issuingAuthority: Swift.String? {
     get
@@ -697,12 +697,12 @@ public enum PassportAuthenticationStatus {
   case success
   case failed
   public static func == (a: Amani.PassportAuthenticationStatus, b: Amani.PassportAuthenticationStatus) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public class NFCPassportModel {
   public var documentType: Swift.String {
     get
@@ -828,34 +828,34 @@ public class NFCPassportModel {
   public func verifyActiveAuthentication(challenge: [Swift.UInt8], signature: [Swift.UInt8])
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class DataGroup14 : Amani.DataGroup {
   public var securityInfos: [Amani.SecurityInfo] {
     get
   }
   @objc deinit
 }
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.CertificateType : Swift.Equatable {}
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.CertificateType : Swift.Hashable {}
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.CertificateItem : Swift.Equatable {}
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.CertificateItem : Swift.Hashable {}
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.CertificateItem : Swift.RawRepresentable {}
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.DataGroupId : Swift.Equatable {}
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.DataGroupId : Swift.Hashable {}
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.DataGroupId : Swift.RawRepresentable {}
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.DocTypeEnum : Swift.Equatable {}
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.DocTypeEnum : Swift.Hashable {}
-@available(iOS 13, macOS 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 extension Amani.DocTypeEnum : Swift.RawRepresentable {}
 extension Amani.PACEMappingType : Swift.Equatable {}
 extension Amani.PACEMappingType : Swift.Hashable {}
