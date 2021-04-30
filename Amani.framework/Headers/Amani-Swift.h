@@ -209,7 +209,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 /// This file represents the Amani SDK base set up
-SWIFT_CLASS("_TtC5Amani8AmaniSDK")
+SWIFT_CLASS("_TtC5Amani8AmaniSDK") SWIFT_AVAILABILITY(ios,introduced=11)
 @interface AmaniSDK : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
