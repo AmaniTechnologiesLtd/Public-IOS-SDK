@@ -57,7 +57,7 @@ The minimum requirements for the SDK are:
 
 ### App permissions
 
-Amani SDK makes use of the device Camera, Location and NFC. You will be required to have the following keys in your application's Info.plist file:
+Amani SDK makes use of the device Camera, Location and NFC. If you dont want to use location service please provide in init method. You will be required to have the following keys in your application's Info.plist file:
 
 ```xml
 <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
@@ -108,7 +108,16 @@ class ViewController: UIViewController {
 	// Configure SDK 
 	amaniSDK.setDelegate(delegate: self)
 	amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer)
+	/*
+	if dont want to use location permissions please provide with useGeoLocation parameter
+	amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer,useGeoLocation: false)
 
+	select showing language with language parameter
+	amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer,language: "tr")
+	
+	
+	amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer,useGeoLocation: false,language: "tr")
+*/
 	// Start SDK 
         amaniSDK.showSDK(overParent: self)
     }
@@ -155,12 +164,18 @@ $ pod install
 
 ```swift
 extension ViewController:AmaniSDKDelegate{
+	func onNoInternetConnection() {
+        
+    }
+
     func onKYCSuccess(CustomerId: Int) {
         //do whatever when customer approved
     }
+
     func onKYCFailed(CustomerId: Int, Rules: [[String : String]]?) {
         // Returns uncompleted fields
     }
+
     func onTokenExpired() {
     	// returns when token expired. Token needs to be refreshed and restart instance 
     }
