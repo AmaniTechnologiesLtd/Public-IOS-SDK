@@ -589,12 +589,14 @@ public protocol AmaniSDKDelegate : AnyObject {
   func onKYCSuccess(CustomerId: Swift.Int)
   func onKYCFailed(CustomerId: Swift.Int, Rules: [[Swift.String : Swift.String]]?)
   func onTokenExpired()
+  func onNoInternetConnection()
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 11, *)
 final public class AmaniSDK : ObjectiveC.NSObject {
   public static var sharedInstance: Amani.AmaniSDK
-  final public func set(server: Swift.String = "https://demo.amani.ai", userName: Swift.String = "mobile_team@amani.ai", password: Swift.String = "vUcxPvfvP9rYUJ", customer: Amani.CustomerRequestModel, nvi: Amani.NviModel? = nil)
-  final public func set(server: Swift.String = "https://demo.amani.ai", token: Swift.String, customer: Amani.CustomerRequestModel, nvi: Amani.NviModel? = nil)
+  final public func set(server: Swift.String = "https://demo.amani.ai", userName: Swift.String = "mobile_team@amani.ai", password: Swift.String = "vUcxPvfvP9rYUJ", customer: Amani.CustomerRequestModel, nvi: Amani.NviModel? = nil, useGeoLocation: Swift.Bool = true, language: Swift.String = "tr")
+  final public func set(server: Swift.String = "https://demo.amani.ai", token: Swift.String, customer: Amani.CustomerRequestModel, nvi: Amani.NviModel? = nil, useGeoLocation: Swift.Bool = true, language: Swift.String = "tr")
+  final public func setFont(fontName: Swift.String = "")
   final public func showSDK(overParent parentViewController: UIKit.UIViewController)
   final public func setDelegate(delegate: Amani.AmaniSDKDelegate)
   @objc deinit
