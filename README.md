@@ -137,7 +137,7 @@ Install using [CocoaPods](http://cocoapods.org) by adding this line to your Podf
 
 ```ruby
 use_frameworks!
-  pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :branch => 'test'
+  pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => '1.2.1'
 ```
 also add after last end statement of podfile 
 
