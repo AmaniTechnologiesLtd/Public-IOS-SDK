@@ -6,7 +6,7 @@ target 'SampleApp' do
   use_frameworks!
 
   # Pods for SampleApp
-  pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :branch => 'test'
+  pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git'
   
 end
 post_install do |installer|
