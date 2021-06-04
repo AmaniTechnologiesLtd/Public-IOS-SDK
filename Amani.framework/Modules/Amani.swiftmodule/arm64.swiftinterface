@@ -590,6 +590,7 @@ public protocol AmaniSDKDelegate : AnyObject {
   func onKYCFailed(CustomerId: Swift.Int, Rules: [[Swift.String : Swift.String]]?)
   func onTokenExpired()
   func onNoInternetConnection()
+  func onConnectionError(error: Swift.String?)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 11, *)
 final public class AmaniSDK : ObjectiveC.NSObject {
