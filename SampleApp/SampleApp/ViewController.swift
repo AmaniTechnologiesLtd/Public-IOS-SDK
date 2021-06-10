@@ -110,6 +110,10 @@ extension UIViewController {
     }
 }
 extension ViewController:AmaniSDKDelegate {
+    func onConnectionError(error: String?) {
+        
+    }
+    
     func onNoInternetConnection() {
         
     }
