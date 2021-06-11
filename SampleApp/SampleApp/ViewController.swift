@@ -57,13 +57,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
              
              
              amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer,useGeoLocation: false,language: "tr")
+             
+             for use nfcOnly option you need to provide nviData
+         
+             let nviData = NviModel(documentNo: "DocumentNo", dateOfBirth: "YYMMDD", dateOfExpire: "YYMMDD")
+             amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer,nvi:nvidata)
              */
-        /*
-         for use nfcOnly option you need to provide nviData
-         */
-//        let nviData = NviModel(documentNo: "DocumentNo", dateOfBirth: "YYMMDD", dateOfExpire: "YYMMDD")
-//        amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer,nvi:nvidata)
-
         amaniSDK.setDelegate(delegate: self)
 
         amaniSDK.showSDK(overParent: self)
