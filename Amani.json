@@ -1,12 +1,4 @@
 {
-	"1.2.4": {
-		"archive":"https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/blob/carthage/Amani.framework.v1.2.4.zip?raw=true",
-		"dependencies": [
-			{
-				"type": "github",
-				"link": "Alamofire/Alamofire",
-				"tag": "~> 5.4"
-			}
-		]
-	} 
+	"1.2.4": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/blob/carthage/Amani.framework.v1.2.4.zip?raw=true"
+	
 }

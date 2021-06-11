@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" >= 5.2
+github "hackiftekhar/IQKeyboardManager"
+github "krzyzanowskim/OpenSSL"
+github "airbnb/lottie-ios" "master"
