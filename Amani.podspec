@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   spec.dependency "lottie-ios"
   spec.xcconfig          = { 'OTHER_LDFLAGS' => '-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit','BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
   spec.ios.deployment_target = '10.0'
-  spec.vendored_frameworks = 'Amani.framework'
+  spec.vendored_frameworks = 'Amani.xcframework'
   
 
 end
