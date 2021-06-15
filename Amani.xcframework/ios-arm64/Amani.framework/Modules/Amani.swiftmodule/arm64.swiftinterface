@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name Amani
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -Onone -module-name Amani
 import AVFoundation
 import Accelerate
 import Alamofire
@@ -516,20 +516,20 @@ public enum PACEMappingType {
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class PACEInfo : Amani.SecurityInfo {
-  public static let PARAM_ID_GFP_1024_160: Swift.Int
-  public static let PARAM_ID_GFP_2048_224: Swift.Int
-  public static let PARAM_ID_GFP_2048_256: Swift.Int
-  public static let PARAM_ID_ECP_NIST_P192_R1: Swift.Int
-  public static let PARAM_ID_ECP_BRAINPOOL_P192_R1: Swift.Int
-  public static let PARAM_ID_ECP_NIST_P224_R1: Swift.Int
-  public static let PARAM_ID_ECP_BRAINPOOL_P224_R1: Swift.Int
-  public static let PARAM_ID_ECP_NIST_P256_R1: Swift.Int
-  public static let PARAM_ID_ECP_BRAINPOOL_P256_R1: Swift.Int
-  public static let PARAM_ID_ECP_BRAINPOOL_P320_R1: Swift.Int
-  public static let PARAM_ID_ECP_NIST_P384_R1: Swift.Int
-  public static let PARAM_ID_ECP_BRAINPOOL_P384_R1: Swift.Int
-  public static let PARAM_ID_ECP_BRAINPOOL_P512_R1: Swift.Int
-  public static let PARAM_ID_ECP_NIST_P521_R1: Swift.Int
+  public static var PARAM_ID_GFP_1024_160: Swift.Int
+  public static var PARAM_ID_GFP_2048_224: Swift.Int
+  public static var PARAM_ID_GFP_2048_256: Swift.Int
+  public static var PARAM_ID_ECP_NIST_P192_R1: Swift.Int
+  public static var PARAM_ID_ECP_BRAINPOOL_P192_R1: Swift.Int
+  public static var PARAM_ID_ECP_NIST_P224_R1: Swift.Int
+  public static var PARAM_ID_ECP_BRAINPOOL_P224_R1: Swift.Int
+  public static var PARAM_ID_ECP_NIST_P256_R1: Swift.Int
+  public static var PARAM_ID_ECP_BRAINPOOL_P256_R1: Swift.Int
+  public static var PARAM_ID_ECP_BRAINPOOL_P320_R1: Swift.Int
+  public static var PARAM_ID_ECP_NIST_P384_R1: Swift.Int
+  public static var PARAM_ID_ECP_BRAINPOOL_P384_R1: Swift.Int
+  public static var PARAM_ID_ECP_BRAINPOOL_P512_R1: Swift.Int
+  public static var PARAM_ID_ECP_NIST_P521_R1: Swift.Int
   override public func getObjectIdentifier() -> Swift.String
   override public func getProtocolOIDString() -> Swift.String
   public func getVersion() -> Swift.Int
@@ -649,7 +649,7 @@ final public class ActivityData {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class NVActivityIndicatorPresenter {
-  public static let sharedInstance: Amani.NVActivityIndicatorPresenter
+  public static var sharedInstance: Amani.NVActivityIndicatorPresenter
   final public func startAnimating(_ data: Amani.ActivityData)
   final public func stopAnimating()
   final public func setMessage(_ message: Swift.String?)
@@ -668,7 +668,7 @@ public protocol AmaniSDKDelegate : AnyObject {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 11, *)
 final public class AmaniSDK : ObjectiveC.NSObject {
-  public static let sharedInstance: Amani.AmaniSDK
+  public static var sharedInstance: Amani.AmaniSDK
   final public func set(server: Swift.String = "https://demo.amani.ai", userName: Swift.String = "mobile_team@amani.ai", password: Swift.String = "vUcxPvfvP9rYUJ", customer: Amani.CustomerRequestModel, nvi: Amani.NviModel? = nil, useGeoLocation: Swift.Bool = true, language: Swift.String = "tr")
   final public func set(server: Swift.String = "https://demo.amani.ai", token: Swift.String, customer: Amani.CustomerRequestModel, nvi: Amani.NviModel? = nil, useGeoLocation: Swift.Bool = true, language: Swift.String = "tr")
   final public func setFont(fontName: Swift.String = "")
@@ -973,12 +973,12 @@ public enum NVActivityIndicatorType : Swift.Int {
   }
   @objc override final public var bounds: CoreGraphics.CGRect {
     @objc get
-    @objc set
+    @objc set(value)
   }
   final public func startAnimating()
   final public func stopAnimating()
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class DataGroup14 : Amani.DataGroup {
@@ -987,39 +987,3 @@ public class DataGroup14 : Amani.DataGroup {
   }
   @objc deinit
 }
-@available(iOS 13, OSX 10.15, *)
-extension Amani.CertificateType : Swift.Equatable {}
-@available(iOS 13, OSX 10.15, *)
-extension Amani.CertificateType : Swift.Hashable {}
-@available(iOS 13, OSX 10.15, *)
-extension Amani.CertificateItem : Swift.Equatable {}
-@available(iOS 13, OSX 10.15, *)
-extension Amani.CertificateItem : Swift.Hashable {}
-@available(iOS 13, OSX 10.15, *)
-extension Amani.CertificateItem : Swift.RawRepresentable {}
-@available(iOS 13, OSX 10.15, *)
-extension Amani.DataGroupId : Swift.Equatable {}
-@available(iOS 13, OSX 10.15, *)
-extension Amani.DataGroupId : Swift.Hashable {}
-@available(iOS 13, OSX 10.15, *)
-extension Amani.DataGroupId : Swift.RawRepresentable {}
-@available(iOS 13, OSX 10.15, *)
-extension Amani.DocTypeEnum : Swift.Equatable {}
-@available(iOS 13, OSX 10.15, *)
-extension Amani.DocTypeEnum : Swift.Hashable {}
-@available(iOS 13, OSX 10.15, *)
-extension Amani.DocTypeEnum : Swift.RawRepresentable {}
-extension Amani.iProgressHUDStyles : Swift.Equatable {}
-extension Amani.iProgressHUDStyles : Swift.Hashable {}
-extension Amani.PACEMappingType : Swift.Equatable {}
-extension Amani.PACEMappingType : Swift.Hashable {}
-extension Amani.SecureMessagingSupportedAlgorithms : Swift.Equatable {}
-extension Amani.SecureMessagingSupportedAlgorithms : Swift.Hashable {}
-extension Amani.LogLevel : Swift.Equatable {}
-extension Amani.LogLevel : Swift.Hashable {}
-extension Amani.LogLevel : Swift.RawRepresentable {}
-extension Amani.PassportAuthenticationStatus : Swift.Equatable {}
-extension Amani.PassportAuthenticationStatus : Swift.Hashable {}
-extension Amani.NVActivityIndicatorType : Swift.Equatable {}
-extension Amani.NVActivityIndicatorType : Swift.Hashable {}
-extension Amani.NVActivityIndicatorType : Swift.RawRepresentable {}
