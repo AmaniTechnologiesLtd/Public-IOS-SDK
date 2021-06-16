@@ -245,11 +245,6 @@ SWIFT_CLASS("_TtC5Amani14PassportReader") SWIFT_AVAILABILITY(ios,introduced=13)
 
 
 
-@interface UIViewController (SWIFT_EXTENSION(Amani)) <UINavigationControllerDelegate>
-- (UIInterfaceOrientationMask)navigationControllerSupportedInterfaceOrientations:(UINavigationController * _Nonnull)navigationController SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
 #endif
