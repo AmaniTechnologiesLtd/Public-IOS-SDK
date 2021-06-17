@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreGraphics;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -216,12 +217,41 @@ SWIFT_CLASS("_TtC5Amani8AmaniSDK") SWIFT_AVAILABILITY(ios,introduced=11)
 @end
 
 
+@class UIColor;
+@class NSCoder;
+
+/// Activity indicator view with nice animations
+SWIFT_CLASS("_TtC5Amani23NVActivityIndicatorView")
+@interface NVActivityIndicatorView : UIView
+/// Color of activity indicator view.
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull color;
+/// Padding of activity indicator view.
+@property (nonatomic) IBInspectable CGFloat padding;
+/// Returns an object initialized from data in a given unarchiver.
+/// self, initialized using the data in decoder.
+/// \param decoder an unarchiver object.
+///
+///
+/// returns:
+/// self, initialized using the data in decoder.
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// Returns the natural size for the receiving view, considering only properties of the view itself.
+/// A size indicating the natural size for the receiving view based on its intrinsic properties.
+///
+/// returns:
+/// A size indicating the natural size for the receiving view based on its intrinsic properties.
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+@property (nonatomic) CGRect bounds;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
 
 SWIFT_CLASS("_TtC5Amani14PassportReader") SWIFT_AVAILABILITY(ios,introduced=13)
 @interface PassportReader : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
+
 
 
 
@@ -244,6 +274,21 @@ SWIFT_CLASS("_TtC5Amani14PassportReader") SWIFT_AVAILABILITY(ios,introduced=13)
 
 
 
+
+
+@interface UIViewController (SWIFT_EXTENSION(Amani)) <UINavigationControllerDelegate>
+- (UIInterfaceOrientationMask)navigationControllerSupportedInterfaceOrientations:(UINavigationController * _Nonnull)navigationController SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
+SWIFT_PROTOCOL("_TtP5Amani20iProgressHUDDelegete_")
+@protocol iProgressHUDDelegete
+@optional
+- (void)onTouchWithView:(UIView * _Nonnull)view;
+- (void)onShowWithView:(UIView * _Nonnull)view;
+- (void)onDismissWithView:(UIView * _Nonnull)view;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
