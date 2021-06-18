@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
-// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -Onone -module-name Amani
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name Amani
 import AVFoundation
 import Accelerate
 import Alamofire
@@ -82,9 +82,6 @@ public class DataGroup {
   }
   public func hash(_ hashAlgorythm: Swift.String) -> [Swift.UInt8]
   @objc deinit
-}
-extension UIViewController : UIKit.UINavigationControllerDelegate {
-  @objc dynamic public func navigationControllerSupportedInterfaceOrientations(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientationMask
 }
 @objc @available(iOS 13, *)
 public class PassportReader : ObjectiveC.NSObject {
@@ -466,20 +463,20 @@ public enum PACEMappingType {
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class PACEInfo : Amani.SecurityInfo {
-  public static var PARAM_ID_GFP_1024_160: Swift.Int
-  public static var PARAM_ID_GFP_2048_224: Swift.Int
-  public static var PARAM_ID_GFP_2048_256: Swift.Int
-  public static var PARAM_ID_ECP_NIST_P192_R1: Swift.Int
-  public static var PARAM_ID_ECP_BRAINPOOL_P192_R1: Swift.Int
-  public static var PARAM_ID_ECP_NIST_P224_R1: Swift.Int
-  public static var PARAM_ID_ECP_BRAINPOOL_P224_R1: Swift.Int
-  public static var PARAM_ID_ECP_NIST_P256_R1: Swift.Int
-  public static var PARAM_ID_ECP_BRAINPOOL_P256_R1: Swift.Int
-  public static var PARAM_ID_ECP_BRAINPOOL_P320_R1: Swift.Int
-  public static var PARAM_ID_ECP_NIST_P384_R1: Swift.Int
-  public static var PARAM_ID_ECP_BRAINPOOL_P384_R1: Swift.Int
-  public static var PARAM_ID_ECP_BRAINPOOL_P512_R1: Swift.Int
-  public static var PARAM_ID_ECP_NIST_P521_R1: Swift.Int
+  public static let PARAM_ID_GFP_1024_160: Swift.Int
+  public static let PARAM_ID_GFP_2048_224: Swift.Int
+  public static let PARAM_ID_GFP_2048_256: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P192_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P192_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P224_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P224_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P256_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P256_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P320_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P384_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P384_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P512_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P521_R1: Swift.Int
   override public func getObjectIdentifier() -> Swift.String
   override public func getProtocolOIDString() -> Swift.String
   public func getVersion() -> Swift.Int
@@ -590,11 +587,10 @@ public protocol AmaniSDKDelegate : AnyObject {
   func onKYCFailed(CustomerId: Swift.Int, Rules: [[Swift.String : Swift.String]]?)
   func onTokenExpired()
   func onNoInternetConnection()
-  func onConnectionError(error: Swift.String?)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 11, *)
 final public class AmaniSDK : ObjectiveC.NSObject {
-  public static var sharedInstance: Amani.AmaniSDK
+  public static let sharedInstance: Amani.AmaniSDK
   final public func set(server: Swift.String = "https://demo.amani.ai", userName: Swift.String = "mobile_team@amani.ai", password: Swift.String = "vUcxPvfvP9rYUJ", customer: Amani.CustomerRequestModel, nvi: Amani.NviModel? = nil, useGeoLocation: Swift.Bool = true, language: Swift.String = "tr")
   final public func set(server: Swift.String = "https://demo.amani.ai", token: Swift.String, customer: Amani.CustomerRequestModel, nvi: Amani.NviModel? = nil, useGeoLocation: Swift.Bool = true, language: Swift.String = "tr")
   final public func setFont(fontName: Swift.String = "")
@@ -838,3 +834,34 @@ public class DataGroup14 : Amani.DataGroup {
   }
   @objc deinit
 }
+@available(iOS 13, OSX 10.15, *)
+extension Amani.CertificateType : Swift.Equatable {}
+@available(iOS 13, OSX 10.15, *)
+extension Amani.CertificateType : Swift.Hashable {}
+@available(iOS 13, OSX 10.15, *)
+extension Amani.CertificateItem : Swift.Equatable {}
+@available(iOS 13, OSX 10.15, *)
+extension Amani.CertificateItem : Swift.Hashable {}
+@available(iOS 13, OSX 10.15, *)
+extension Amani.CertificateItem : Swift.RawRepresentable {}
+@available(iOS 13, OSX 10.15, *)
+extension Amani.DataGroupId : Swift.Equatable {}
+@available(iOS 13, OSX 10.15, *)
+extension Amani.DataGroupId : Swift.Hashable {}
+@available(iOS 13, OSX 10.15, *)
+extension Amani.DataGroupId : Swift.RawRepresentable {}
+@available(iOS 13, OSX 10.15, *)
+extension Amani.DocTypeEnum : Swift.Equatable {}
+@available(iOS 13, OSX 10.15, *)
+extension Amani.DocTypeEnum : Swift.Hashable {}
+@available(iOS 13, OSX 10.15, *)
+extension Amani.DocTypeEnum : Swift.RawRepresentable {}
+extension Amani.PACEMappingType : Swift.Equatable {}
+extension Amani.PACEMappingType : Swift.Hashable {}
+extension Amani.SecureMessagingSupportedAlgorithms : Swift.Equatable {}
+extension Amani.SecureMessagingSupportedAlgorithms : Swift.Hashable {}
+extension Amani.LogLevel : Swift.Equatable {}
+extension Amani.LogLevel : Swift.Hashable {}
+extension Amani.LogLevel : Swift.RawRepresentable {}
+extension Amani.PassportAuthenticationStatus : Swift.Equatable {}
+extension Amani.PassportAuthenticationStatus : Swift.Hashable {}

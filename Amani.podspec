@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'OpenSSL-Universal'
   spec.xcconfig          = { 'OTHER_LDFLAGS' => '-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit','BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
   spec.ios.deployment_target = '10.0'
-  spec.vendored_frameworks = 'Amani.xcframework'
+  spec.vendored_frameworks = 'Amani.framework'
   
 
 end
