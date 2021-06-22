@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'SwiftLint'
   spec.dependency 'IQKeyboardManagerSwift'
   spec.dependency "lottie-ios"
-  spec.dependency 'OpenSSL-Universal'
+  # spec.dependency 'OpenSSL-Universal'
   spec.xcconfig          = { 'OTHER_LDFLAGS' => '-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit','BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
   spec.ios.deployment_target = '10.0'
   spec.vendored_frameworks = 'Amani.framework'
