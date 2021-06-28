@@ -83,9 +83,6 @@ public class DataGroup {
   public func hash(_ hashAlgorythm: Swift.String) -> [Swift.UInt8]
   @objc deinit
 }
-extension UIViewController : UIKit.UINavigationControllerDelegate {
-  @objc dynamic public func navigationControllerSupportedInterfaceOrientations(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientationMask
-}
 @objc @available(iOS 13, *)
 public class PassportReader : ObjectiveC.NSObject {
   public var passiveAuthenticationUsesOpenSSL: Swift.Bool

@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "Amani"
-  spec.version      = "1.2.4"
+  spec.version      = "1.2.5"
   spec.summary      = "Amani-SDK"
   spec.description  = "The Amani Software Development kit (SDK) provides you complete steps to perform eKYC."
   spec.homepage     = "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK"
@@ -20,9 +20,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => "#{spec.version}"}
   spec.dependency 'Alamofire', '>=5.2'
   spec.dependency 'SwiftLint'
-  spec.dependency 'iProgressHUD'
   spec.dependency 'IQKeyboardManagerSwift'
-  spec.dependency "OpenSSL-Universal"
   spec.dependency "lottie-ios"
   spec.xcconfig          = { 'OTHER_LDFLAGS' => '-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit','BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
   spec.ios.deployment_target = '10.0'
