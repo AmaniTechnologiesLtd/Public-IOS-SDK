@@ -6,7 +6,7 @@ target 'SampleApp' do
   use_frameworks!
 
   # Pods for SampleApp
-  pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :branch=>'carthage'
+  pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag=>'1.2.6'
   
   
 end
