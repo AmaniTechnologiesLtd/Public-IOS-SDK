@@ -164,8 +164,11 @@ $ pod install
 
 ```swift
 extension ViewController:AmaniSDKDelegate{
-	func onNoInternetConnection() {
-        
+    func onConnectionError(error: String?) {
+        //do whatever when connection error
+    }
+    func onNoInternetConnection() {
+        //do whatever when no internet connection
     }
 
     func onKYCSuccess(CustomerId: Int) {
