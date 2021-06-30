@@ -17,11 +17,11 @@ import MetalKit
 import MetalPerformanceShaders
 import MobileCoreServices
 import OpenSSL
+import QuartzCore
 import Swift
 import UIKit
 import Vision
 import WebKit
-import iProgressHUD
 public struct CustomerRequestModel : Swift.Codable {
   public var name: Swift.String?
   public var email: Swift.String?
@@ -112,6 +112,51 @@ public class SecurityInfo {
   public func getProtocolOIDString() -> Swift.String
   @objc deinit
 }
+public enum iProgressHUDStyles {
+  case vertical
+  case horizontal
+  public static func == (a: Amani.iProgressHUDStyles, b: Amani.iProgressHUDStyles) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+open class iProgressHUD {
+  open var indicatorStyle: Amani.NVActivityIndicatorType
+  open var iprogressStyle: Amani.iProgressHUDStyles
+  open var indicatorView: Amani.NVActivityIndicatorView!
+  final public let modalView: UIKit.UIImageView
+  final public let boxView: UIKit.UIImageView!
+  final public let captionView: UIKit.UILabel!
+  open var indicatorSize: CoreGraphics.CGFloat
+  open var alphaModal: CoreGraphics.CGFloat
+  open var alphaBox: CoreGraphics.CGFloat
+  open var boxSize: CoreGraphics.CGFloat
+  open var boxCorner: CoreGraphics.CGFloat
+  open var captionDistance: CoreGraphics.CGFloat
+  open var isShowCaption: Swift.Bool
+  open var isShowModal: Swift.Bool
+  open var isShowBox: Swift.Bool
+  open var isBlurModal: Swift.Bool
+  open var isBlurBox: Swift.Bool
+  open var isTouchDismiss: Swift.Bool
+  open var modalColor: UIKit.UIColor
+  open var boxColor: UIKit.UIColor
+  open var captionColor: UIKit.UIColor
+  open var indicatorColor: UIKit.UIColor
+  open var captionSize: CoreGraphics.CGFloat
+  open var delegete: Amani.iProgressHUDDelegete?
+  public init()
+  public init(style: Amani.NVActivityIndicatorType)
+  public static func sharedInstance() -> Amani.iProgressHUD
+  open func attachProgress(toViews: UIKit.UIView...)
+  open func attachProgress(toViews: [UIKit.UIView])
+  open func attachProgress(toView: UIKit.UIView)
+  open func isShowing() -> Swift.Bool
+  open func show()
+  open func dismiss()
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class ImageCheck {
   public func blurCheck(image: CoreGraphics.CGImage, blurVariance: Swift.Int = 5) -> Swift.Bool
   @objc deinit
@@ -134,6 +179,17 @@ public struct NviModel : Swift.Codable {
   public func getMRZ() -> Swift.String
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+}
+final public class ActivityData {
+  public init(size: CoreGraphics.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, messageSpacing: CoreGraphics.CGFloat? = nil, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class NVActivityIndicatorPresenter {
+  public static let sharedInstance: Amani.NVActivityIndicatorPresenter
+  final public func startAnimating(_ data: Amani.ActivityData)
+  final public func stopAnimating()
+  final public func setMessage(_ message: Swift.String?)
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class OpenSSLUtils {
@@ -313,6 +369,13 @@ public class DataGroup2 : Amani.DataGroup {
   }
   @objc deinit
 }
+extension UIView {
+  public func showProgress()
+  public func dismissProgress()
+  public func updateIndicator(style: Amani.NVActivityIndicatorType)
+  public func updateCaption(text: Swift.String)
+  public func updateColors(modalColor: UIKit.UIColor?, boxColor: UIKit.UIColor?, indicatorColor: UIKit.UIColor?, captionColor: UIKit.UIColor?)
+}
 @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class ChipAuthenticationInfo : Amani.SecurityInfo {
   override public func getObjectIdentifier() -> Swift.String
@@ -344,6 +407,81 @@ public class DataGroup1 : Amani.DataGroup {
   public var elements: [Swift.String : Swift.String] {
     get
   }
+  @objc deinit
+}
+public enum NVActivityIndicatorType : Swift.Int {
+  case blank
+  case ballPulse
+  case ballGridPulse
+  case ballClipRotate
+  case squareSpin
+  case ballClipRotatePulse
+  case ballClipRotateMultiple
+  case ballPulseRise
+  case ballRotate
+  case cubeTransition
+  case ballZigZag
+  case ballZigZagDeflect
+  case ballTrianglePath
+  case ballScale
+  case lineScale
+  case lineScaleParty
+  case ballScaleMultiple
+  case ballPulseSync
+  case ballBeat
+  case lineScalePulseOut
+  case lineScalePulseOutRapid
+  case ballScaleRipple
+  case ballScaleRippleMultiple
+  case ballSpinFadeLoader
+  case lineSpinFadeLoader
+  case triangleSkewSpin
+  case pacman
+  case ballGridBeat
+  case semiCircleSpin
+  case ballRotateChase
+  case orbit
+  case audioEqualizer
+  case circleStrokeSpin
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+}
+@objc final public class NVActivityIndicatorView : UIKit.UIView {
+  public static var DEFAULT_TYPE: Amani.NVActivityIndicatorType
+  public static var DEFAULT_COLOR: UIKit.UIColor
+  public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
+  public static var DEFAULT_PADDING: CoreGraphics.CGFloat
+  public static var DEFAULT_BLOCKER_SIZE: CoreGraphics.CGSize
+  public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
+  public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
+  public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
+  public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreGraphics.CGFloat
+  public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
+  public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
+  final public var type: Amani.NVActivityIndicatorType
+  @objc @IBInspectable final public var color: UIKit.UIColor
+  @objc @IBInspectable final public var padding: CoreGraphics.CGFloat
+  final public var animating: Swift.Bool {
+    get
+  }
+  final public var isAnimating: Swift.Bool {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public init(frame: CoreGraphics.CGRect, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil)
+  @objc override final public var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
+  }
+  @objc override final public var bounds: CoreGraphics.CGRect {
+    @objc get
+    @objc set
+  }
+  final public func startAnimating()
+  final public func stopAnimating()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
@@ -503,6 +641,12 @@ public class CardAccess {
   }
   @objc deinit
 }
+public protocol NVActivityIndicatorViewable {
+}
+extension NVActivityIndicatorViewable where Self : UIKit.UIViewController {
+  public func startAnimating(_ size: CoreGraphics.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil)
+  public func stopAnimating()
+}
 public enum SecureMessagingSupportedAlgorithms {
   case DES
   case AES
@@ -649,6 +793,11 @@ public class COM : Amani.DataGroup {
     get
   }
   @objc deinit
+}
+@objc public protocol iProgressHUDDelegete {
+  @objc optional func onTouch(view: UIKit.UIView)
+  @objc optional func onShow(view: UIKit.UIView)
+  @objc optional func onDismiss(view: UIKit.UIView)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, OSX 10.15, *)
 public class DataGroup12 : Amani.DataGroup {
@@ -834,6 +983,8 @@ public class DataGroup14 : Amani.DataGroup {
   }
   @objc deinit
 }
+extension Amani.iProgressHUDStyles : Swift.Equatable {}
+extension Amani.iProgressHUDStyles : Swift.Hashable {}
 @available(iOS 13, OSX 10.15, *)
 extension Amani.CertificateType : Swift.Equatable {}
 @available(iOS 13, OSX 10.15, *)
@@ -856,6 +1007,9 @@ extension Amani.DocTypeEnum : Swift.Equatable {}
 extension Amani.DocTypeEnum : Swift.Hashable {}
 @available(iOS 13, OSX 10.15, *)
 extension Amani.DocTypeEnum : Swift.RawRepresentable {}
+extension Amani.NVActivityIndicatorType : Swift.Equatable {}
+extension Amani.NVActivityIndicatorType : Swift.Hashable {}
+extension Amani.NVActivityIndicatorType : Swift.RawRepresentable {}
 extension Amani.PACEMappingType : Swift.Equatable {}
 extension Amani.PACEMappingType : Swift.Hashable {}
 extension Amani.SecureMessagingSupportedAlgorithms : Swift.Equatable {}
