@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "4.2"
   spec.source       = { :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => "#{spec.version}"}
   spec.dependency 'Alamofire', '>=5.2'
-  spec.dependency 'SwiftLint'
+  # spec.dependency 'SwiftLint'
   spec.dependency 'IQKeyboardManagerSwift'
   spec.dependency "lottie-ios"
   spec.dependency 'OpenSSL-Universal'
