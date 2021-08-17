@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "Amani"
-  spec.version      = "1.2.10"
+  spec.version      = "1.2.11"
   spec.summary      = "Amani-SDK"
   spec.description  = "The Amani Software Development kit (SDK) provides you complete steps to perform eKYC."
   spec.homepage     = "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK"
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'OpenSSL-Universal'
   spec.xcconfig          = { 'OTHER_LDFLAGS' => '-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit','BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
   spec.ios.deployment_target = '10.0'
-  spec.vendored_frameworks = 'Amani.framework'
+  spec.vendored_frameworks = 'Amani.xcframework'
   
 
 end
