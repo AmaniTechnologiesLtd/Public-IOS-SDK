@@ -1,4 +1,6 @@
 {
 	"1.2.6": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/raw/main/Carthage/v1.2.6/Amani.xcframework.zip",
-	"1.2.8": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/raw/main/Carthage/v1.2.8/Amani.xcframework.zip"
+	"1.2.8": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/raw/main/Carthage/v1.2.8/Amani.xcframework.zip",
+	"2.0.0": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/raw/main/Carthage/v2.0.0/Amani.xcframework.zip"
+
 }
