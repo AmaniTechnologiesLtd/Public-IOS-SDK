@@ -731,6 +731,38 @@ public protocol AmaniSDKDelegate : AnyObject {
   func onKYCFailed(CustomerId: Swift.Int, Rules: [[Swift.String : Swift.String]]?)
   func onTokenExpired()
   func onNoInternetConnection()
+  func onEvent(name: Swift.String, Parameters: [Swift.String]?, type: Swift.String)
+}
+public enum EventType : Swift.String {
+  case buttonPressed
+  case upload
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum EventParams : Swift.String {
+  case nviDataNull
+  case iOSVersion
+  case CoreNFCCantImport
+  case ManualCrop
+  case Confirm
+  case TryAgain
+  case BackButton
+  case TakePhoto
+  case WithNfc
+  case Clear
+  case Readbtn
+  case Continuebtn
+  case Uploadbtn
+  case Downloadbtn
+  case Error
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 11, *)
 final public class AmaniSDK : ObjectiveC.NSObject {
@@ -1014,6 +1046,12 @@ extension Amani.PACEMappingType : Swift.Equatable {}
 extension Amani.PACEMappingType : Swift.Hashable {}
 extension Amani.SecureMessagingSupportedAlgorithms : Swift.Equatable {}
 extension Amani.SecureMessagingSupportedAlgorithms : Swift.Hashable {}
+extension Amani.EventType : Swift.Equatable {}
+extension Amani.EventType : Swift.Hashable {}
+extension Amani.EventType : Swift.RawRepresentable {}
+extension Amani.EventParams : Swift.Equatable {}
+extension Amani.EventParams : Swift.Hashable {}
+extension Amani.EventParams : Swift.RawRepresentable {}
 extension Amani.LogLevel : Swift.Equatable {}
 extension Amani.LogLevel : Swift.Hashable {}
 extension Amani.LogLevel : Swift.RawRepresentable {}
