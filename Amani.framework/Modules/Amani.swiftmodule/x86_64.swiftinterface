@@ -86,7 +86,7 @@ public class DataGroup {
 @objc @available(iOS 13, *)
 public class PassportReader : ObjectiveC.NSObject {
   public var passiveAuthenticationUsesOpenSSL: Swift.Bool
-  public init(logLevel: Amani.LogLevel = .info, masterListURL: Foundation.URL? = nil)
+  public init(logLevel: Amani.LogLevel = .error, masterListURL: Foundation.URL? = nil)
   public func setMasterListURL(_ masterListURL: Foundation.URL)
   public func overrideNFCDataAmountToRead(amount: Swift.Int)
   public func readPassport(mrzKey: Swift.String, tags: [Amani.DataGroupId] = [], skipSecureElements: Swift.Bool = true, customDisplayMessage: ((Amani.NFCViewDisplayMessage) -> Swift.String?)? = nil, completed: @escaping (Amani.NFCPassportModel?, Amani.NFCPassportReaderError?) -> ())
