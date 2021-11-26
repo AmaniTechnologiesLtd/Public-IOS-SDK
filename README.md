@@ -160,6 +160,36 @@ $ pod install
 
 ## Getting Results 
 
+## Event-Fire Callback ##
+    
+    Event fire mechanism returns you as a simple callback. This callback contains string value of; EventType, EventName, EventParams. 
+
+### Event Types ###
+We are currently supporting two types of event.
+  * ButtonPressed
+  * Upload
+  
+### Event Names ###
+We are currently supporting different kind of names. 
+
+  * ManualCrop
+  * Upload  
+  * TryAgain
+  * TakePhoto
+  * OpenCameraButton
+  * Clear
+  * UploadButton
+  * DownloadButton
+  * WithNFC
+  * ReadBtn
+  * Continuebtn
+  * Error
+  
+  ### Event Params ###
+  We are currently supporting different kind of params. EventParams might be response of upload as string ("OK","ERROR"), "BackSide", "FrontSide" of documents.
+
+    
+    
 ###### Swift
 
 ```swift
@@ -170,7 +200,12 @@ extension ViewController:AmaniSDKDelegate{
     func onNoInternetConnection() {
         //do whatever when no internet connection
     }
-
+    func onEvent(name: String, Parameters: [String]?, type: String) {
+    	//type // Type returns list of EventType
+	//name // Name returns name of document. (If there is more than one document, it returns title of the button that is clicked.)
+	//parameter // Parameter returns response of upload.
+        print("log : \(name), \(Parameters), \(type)")
+    }
     func onKYCSuccess(CustomerId: Int) {
         //do whatever when customer approved
     }
