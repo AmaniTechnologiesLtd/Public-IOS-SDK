@@ -161,8 +161,7 @@ $ pod install
 ## Getting Results 
 
 ## Event-Fire Callback ##
-    
-    Event fire mechanism returns you as a simple callback. This callback contains string value of; EventType, EventName, EventParams. 
+Event fire mechanism returns you as a simple callback. This callback contains string value of; EventType, EventName, EventParams. 
 
 ### Event Types ###
 We are currently supporting two types of event.
