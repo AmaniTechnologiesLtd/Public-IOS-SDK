@@ -200,9 +200,16 @@ extension ViewController:AmaniSDKDelegate{
         //do whatever when no internet connection
     }
     func onEvent(name: String, Parameters: [String]?, type: String) {
+    	/*
     	//type // Type returns list of EventType
-	//name // Name returns name of document. (If there is more than one document, it returns title of the button that is clicked.)
-	//parameter // Parameter returns response of upload.
+	//name // Amani Event Name. If there is more than one document, 
+		returns the type of that document group else returns the type of the document 
+		(the document type returns to you according to Amani standards).
+		
+	//parameter // Parameter returns Response, Error of upload. 
+			If there is available it shows which step (like "0" front, "1" back) 
+			(log: "XXX_SG_0", ["Continuebtn","0"], "buttonpressed" )
+	*/
         print("log : \(name), \(Parameters), \(type)")
     }
     func onKYCSuccess(CustomerId: Int) {
