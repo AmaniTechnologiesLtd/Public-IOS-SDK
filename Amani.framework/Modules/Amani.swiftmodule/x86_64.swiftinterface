@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 effective-4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5.1 effective-4.2 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name Amani
 import AVFoundation
 import Accelerate
@@ -22,6 +22,7 @@ import Swift
 import UIKit
 import Vision
 import WebKit
+import _Concurrency
 public struct CustomerRequestModel : Swift.Codable {
   public var name: Swift.String?
   public var email: Swift.String?
@@ -90,11 +91,10 @@ public class PassportReader : ObjectiveC.NSObject {
   public func setMasterListURL(_ masterListURL: Foundation.URL)
   public func overrideNFCDataAmountToRead(amount: Swift.Int)
   public func readPassport(mrzKey: Swift.String, tags: [Amani.DataGroupId] = [], skipSecureElements: Swift.Bool = true, customDisplayMessage: ((Amani.NFCViewDisplayMessage) -> Swift.String?)? = nil, completed: @escaping (Amani.NFCPassportModel?, Amani.NFCPassportReaderError?) -> ())
-  @objc override dynamic public init()
   @objc deinit
 }
 @available(iOS 13, *)
-extension PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
+extension Amani.PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
   public func tagReaderSessionDidBecomeActive(_ session: CoreNFC.NFCTagReaderSession)
   public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didInvalidateWithError error: Swift.Error)
   public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didDetect tags: [CoreNFC.NFCTag])
@@ -369,12 +369,12 @@ public class DataGroup2 : Amani.DataGroup {
   }
   @objc deinit
 }
-extension UIView {
-  public func showProgress()
-  public func dismissProgress()
-  public func updateIndicator(style: Amani.NVActivityIndicatorType)
-  public func updateCaption(text: Swift.String)
-  public func updateColors(modalColor: UIKit.UIColor?, boxColor: UIKit.UIColor?, indicatorColor: UIKit.UIColor?, captionColor: UIKit.UIColor?)
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func showProgress()
+  @_Concurrency.MainActor(unsafe) public func dismissProgress()
+  @_Concurrency.MainActor(unsafe) public func updateIndicator(style: Amani.NVActivityIndicatorType)
+  @_Concurrency.MainActor(unsafe) public func updateCaption(text: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func updateColors(modalColor: UIKit.UIColor?, boxColor: UIKit.UIColor?, indicatorColor: UIKit.UIColor?, captionColor: UIKit.UIColor?)
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class ChipAuthenticationInfo : Amani.SecurityInfo {
@@ -386,9 +386,9 @@ public class ChipAuthenticationInfo : Amani.SecurityInfo {
   public static func toKeyLength(oid: Swift.String) throws -> Swift.Int
   @objc deinit
 }
-extension UINavigationController {
-  @objc override dynamic open var shouldAutorotate: Swift.Bool {
-    @objc get
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
 }
 @available(iOS 13, macOS 10.15, *)
@@ -449,39 +449,38 @@ public enum NVActivityIndicatorType : Swift.Int {
     get
   }
 }
-@objc final public class NVActivityIndicatorView : UIKit.UIView {
-  public static var DEFAULT_TYPE: Amani.NVActivityIndicatorType
-  public static var DEFAULT_COLOR: UIKit.UIColor
-  public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
-  public static var DEFAULT_PADDING: CoreGraphics.CGFloat
-  public static var DEFAULT_BLOCKER_SIZE: CoreGraphics.CGSize
-  public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
-  public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
-  public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
-  public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreGraphics.CGFloat
-  public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
-  public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
-  final public var type: Amani.NVActivityIndicatorType
-  @objc @IBInspectable final public var color: UIKit.UIColor
-  @objc @IBInspectable final public var padding: CoreGraphics.CGFloat
-  final public var animating: Swift.Bool {
+@objc @_Concurrency.MainActor(unsafe) final public class NVActivityIndicatorView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TYPE: Amani.NVActivityIndicatorType
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_PADDING: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_SIZE: CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) final public var type: Amani.NVActivityIndicatorType
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var color: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var padding: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) final public var animating: Swift.Bool {
     get
   }
-  final public var isAnimating: Swift.Bool {
+  @_Concurrency.MainActor(unsafe) final public var isAnimating: Swift.Bool {
     get
   }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  public init(frame: CoreGraphics.CGRect, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil)
-  @objc override final public var intrinsicContentSize: CoreGraphics.CGSize {
-    @objc get
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
-  @objc override final public var bounds: CoreGraphics.CGRect {
-    @objc get
-    @objc set
+  @_Concurrency.MainActor(unsafe) @objc override final public var bounds: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
   }
-  final public func startAnimating()
-  final public func stopAnimating()
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) final public func startAnimating()
+  @_Concurrency.MainActor(unsafe) final public func stopAnimating()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
@@ -500,7 +499,7 @@ public enum NFCViewDisplayMessage {
   case successfulRead
 }
 @available(iOS 13, macOS 10.15, *)
-extension NFCViewDisplayMessage {
+extension Amani.NFCViewDisplayMessage {
   public var description: Swift.String {
     get
   }
@@ -643,7 +642,7 @@ public class CardAccess {
 }
 public protocol NVActivityIndicatorViewable {
 }
-extension NVActivityIndicatorViewable where Self : UIKit.UIViewController {
+extension Amani.NVActivityIndicatorViewable where Self : UIKit.UIViewController {
   public func startAnimating(_ size: CoreGraphics.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil)
   public func stopAnimating()
 }
@@ -690,7 +689,7 @@ public enum NFCPassportReaderError : Swift.Error {
   case NotYetSupported(Swift.String)
 }
 @available(iOS 13, macOS 10.15, *)
-extension NFCPassportReaderError : Foundation.LocalizedError {
+extension Amani.NFCPassportReaderError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -707,7 +706,7 @@ public enum OpenSSLError : Swift.Error {
   case UnableToDecryptRSASignature(Swift.String)
 }
 @available(iOS 13, macOS 10.15, *)
-extension OpenSSLError : Foundation.LocalizedError {
+extension Amani.OpenSSLError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -717,7 +716,7 @@ public enum PassiveAuthenticationError : Swift.Error {
   case InvalidDataGroupHash(Swift.String)
   case SODMissing(Swift.String)
 }
-extension PassiveAuthenticationError : Foundation.LocalizedError {
+extension Amani.PassiveAuthenticationError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -809,7 +808,7 @@ public class BACHandler {
   public var kifd: [Swift.UInt8]
   public init()
   public init(tagReader: Amani.TagReader)
-  public func performBACAndGetSessionKeys(mrzKey: Swift.String, completed: @escaping (Amani.NFCPassportReaderError?) -> ())
+  public func performBACAndGetSessionKeys(mrzKey: Swift.String, completed: @escaping (_ error: Amani.NFCPassportReaderError?) -> ())
   public func sessionKeys(data: [Swift.UInt8]) throws -> ([Swift.UInt8], [Swift.UInt8], [Swift.UInt8])
   @objc deinit
 }
