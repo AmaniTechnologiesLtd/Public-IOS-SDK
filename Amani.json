@@ -12,5 +12,6 @@
 	"2.1.4-xcode13": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/raw/main/Carthage/v2.1.4x13/Amani.xcframework.zip",
 	"2.2.0": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/raw/main/Carthage/v2.2.0/Amani.xcframework.zip",
 	"2.2.1-xcode13": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/raw/main/Carthage/v2.2.1x13/Amani.xcframework.zip",
-	"2.2.1-xcode12": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/raw/main/Carthage/v2.2.1x12/Amani.xcframework.zip"
+	"2.2.1-xcode12": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/raw/main/Carthage/v2.2.1x12/Amani.xcframework.zip",
+	"2.2.1-xcode132": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK/raw/main/Carthage/v2.2.1x132/Amani.xcframework.zip"
 }
