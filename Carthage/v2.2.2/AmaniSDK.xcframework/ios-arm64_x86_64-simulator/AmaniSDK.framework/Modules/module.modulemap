@@ -1,0 +1,4 @@
+framework module AmaniSDK {
+  header "AmaniSDK-Swift.h"
+  requires objc
+}
