@@ -6,26 +6,26 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
 
-  spec.name         = "Amani"
-  spec.version      = "1.2.19"
-  spec.summary      = "Amani-SDK"
-  spec.description  = "The Amani Software Development kit (SDK) provides you complete steps to perform eKYC."
-  spec.homepage     = "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK"
-  spec.license      = "Copyright"
-  spec.author       = "Amani"
-  spec.platform     = :ios, "4.2"
-  spec.source       = { :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => "#{spec.version}"}
-  spec.dependency 'Alamofire', '>=5.2'
-  spec.dependency 'SwiftLint'
-  spec.dependency 'IQKeyboardManagerSwift'
-  spec.dependency "lottie-ios"
-  spec.dependency 'OpenSSL-Universal'
-  spec.xcconfig          = { 'OTHER_LDFLAGS' => '-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit','BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
-  spec.ios.deployment_target = '10.0'
-  spec.vendored_frameworks = 'Amani.framework'
+  s.name         = "Amani"
+  s.version      = "1.2.22"
+  s.summary      = "Amani-SDK"
+  s.description  = "The Amani Software Development kit (SDK) provides you complete steps to perform eKYC."
+  s.homepage     = "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK"
+  s.license      = "Copyright"
+  s.author       = "Amani"
+  s.platform     = :ios, "10.0"
+  s.source       = { :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => "#{s.version}"}
+ #s.dependency 'Alamofire', '>=5.2'
+  s.dependency 'SwiftLint'
+  s.dependency 'IQKeyboardManagerSwift'
+  s.dependency "lottie-ios"
+  s.dependency 'OpenSSL-Universal'
+  s.xcconfig          = { 'OTHER_LDFLAGS' => '-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit'}
+  s.ios.deployment_target = '10.0'
+  s.vendored_frameworks = 'Amani.xcframework'
   
 
 end

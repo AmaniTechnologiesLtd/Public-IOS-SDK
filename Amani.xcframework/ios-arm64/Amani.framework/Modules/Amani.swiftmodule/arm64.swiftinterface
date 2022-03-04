@@ -1,9 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 effective-4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name Amani
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Amani
 import AVFoundation
 import Accelerate
-import Alamofire
 @_exported import Amani
 import CommonCrypto
 import CoreLocation
@@ -110,6 +109,13 @@ public class DataGroup7 : Amani.DataGroup {
 public class SecurityInfo {
   public func getObjectIdentifier() -> Swift.String
   public func getProtocolOIDString() -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class mkNetwork {
+  public func request<T, R>(url: Swift.String, method: Amani.HTTPMethod, parameters: T? = nil, headers: [Swift.String : Swift.String]? = nil, queryParams: [Swift.String : Swift.String]? = nil, signKey: Swift.String? = nil, ResultType: R.Type, Response: @escaping (Swift.Result<R, Swift.Error>) -> ()) where T : Swift.Decodable, T : Swift.Encodable, R : Swift.Decodable, R : Swift.Encodable
+  public func request<T>(url: Swift.String, method: Amani.HTTPMethod, parameters: T? = nil, headers: [Swift.String : Swift.String]? = nil, queryParams: [Swift.String : Swift.String]? = nil, signKey: Swift.String? = nil, Response: @escaping (Swift.Result<Amani.ResponseData, Swift.Error>) -> ()) where T : Swift.Decodable, T : Swift.Encodable
+  public func multiPartRequest<T>(url: Swift.String, method: Amani.HTTPMethod, parameters: T?, headers: [Swift.String : Swift.String]? = nil, queryParams: [Swift.String : Swift.String]? = nil, signKey: Swift.String? = nil, Response: @escaping (Swift.Result<Amani.ResponseData, Swift.Error>) -> ()) where T : Swift.Decodable, T : Swift.Encodable
+  public func multiPartRequest<T, R>(url: Swift.String, method: Amani.HTTPMethod, parameters: T?, headers: [Swift.String : Swift.String]? = nil, queryParams: [Swift.String : Swift.String]? = nil, signKey: Swift.String? = nil, ResultType: R.Type, Response: @escaping (Swift.Result<R, Swift.Error>) -> ()) where T : Swift.Decodable, T : Swift.Encodable, R : Swift.Decodable, R : Swift.Encodable
   @objc deinit
 }
 public enum iProgressHUDStyles {
@@ -409,6 +415,17 @@ public class DataGroup1 : Amani.DataGroup {
   }
   @objc deinit
 }
+public struct NetworkError : Swift.Codable, Swift.Error {
+  public var error_code: Swift.Int!
+  public var error_message: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ResponseData {
+  public var statusCode: Swift.Int
+  public var data: Foundation.Data
+}
+public typealias HTTPHeaders = [Swift.String : Swift.String]
 public enum NVActivityIndicatorType : Swift.Int {
   case blank
   case ballPulse
@@ -507,6 +524,18 @@ extension NFCViewDisplayMessage {
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, *)
 public class TagReader {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SignDocument {
+  public func generateHMACSignature(SharedSecret: Swift.String, RequestMethod: Swift.String, RequestPath: Swift.String, RequestBody: Swift.String, algorithm: Amani.SignDocument.HMACAlgo = .SHA256) -> Swift.String
+  public enum HMACAlgo {
+    case MD5, SHA1, SHA224, SHA256, SHA384, SHA512
+    public static func == (a: Amani.SignDocument.HMACAlgo, b: Amani.SignDocument.HMACAlgo) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
   @objc deinit
 }
 public func binToHexRep(_ val: [Swift.UInt8], asArray: Swift.Bool = false) -> Swift.String
@@ -721,6 +750,20 @@ extension PassiveAuthenticationError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
+}
+public struct HTTPMethod : Swift.RawRepresentable, Swift.Equatable, Swift.Hashable {
+  public static let connect: Amani.HTTPMethod
+  public static let delete: Amani.HTTPMethod
+  public static let get: Amani.HTTPMethod
+  public static let head: Amani.HTTPMethod
+  public static let options: Amani.HTTPMethod
+  public static let patch: Amani.HTTPMethod
+  public static let post: Amani.HTTPMethod
+  public static let put: Amani.HTTPMethod
+  public static let trace: Amani.HTTPMethod
+  public let rawValue: Swift.String
+  public init(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
 }
 public struct CustomerDetailModel : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
@@ -1042,6 +1085,8 @@ extension Amani.DocTypeEnum : Swift.RawRepresentable {}
 extension Amani.NVActivityIndicatorType : Swift.Equatable {}
 extension Amani.NVActivityIndicatorType : Swift.Hashable {}
 extension Amani.NVActivityIndicatorType : Swift.RawRepresentable {}
+extension Amani.SignDocument.HMACAlgo : Swift.Equatable {}
+extension Amani.SignDocument.HMACAlgo : Swift.Hashable {}
 extension Amani.PACEMappingType : Swift.Equatable {}
 extension Amani.PACEMappingType : Swift.Hashable {}
 extension Amani.SecureMessagingSupportedAlgorithms : Swift.Equatable {}
