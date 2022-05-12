@@ -109,6 +109,11 @@ extension UIViewController {
     }
 }
 extension ViewController:AmaniSDKDelegate {
+    
+    func onEvent(name: String, Parameters: [String]?, type: String) {
+        
+    }
+    
     func onConnectionError(error: String?) {
         
     }
