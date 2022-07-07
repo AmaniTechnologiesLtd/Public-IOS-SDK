@@ -6,35 +6,39 @@
 	<dict>
 		<key>AddressFormVC.nib/objects-14.0+.nib</key>
 		<data>
-		H68QvKhGz9aBnBv3McI5hJiSrOU=
+		n9uLv5PmsRCJFyT7LzwC0U3P6g8=
 		</data>
 		<key>AddressFormVC.nib/runtime.nib</key>
 		<data>
-		IWcgXx0dW8b0fgvHqgViuInFuYc=
+		UHuLXdTNrGjPjn7MZ1ZcoIgoRes=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		EytrI0lPoUmsF2Sxj0P946Q6UeA=
+		Y1tby0yArr77CoWEIPVmcWZmvz0=
+		</data>
+		<key>AutoSelfieCaptureView.nib</key>
+		<data>
+		lJH8XZE9mxMpM/1LqS2lxcQtcfE=
 		</data>
 		<key>CityTableViewCell.nib</key>
 		<data>
-		LcQoWjlRORSwNc7AVwTq9rOIwwo=
+		TF4MdtZmElpxZGSRRORq8uMPeG4=
 		</data>
 		<key>DigitalContractViewController.nib</key>
 		<data>
-		d2l78i+nXrrRySF/M94cDpzPQkA=
+		0TrAst/9QMjl+6x7q8jkik8TVdM=
 		</data>
 		<key>DigitalSignatureViewController.nib</key>
 		<data>
-		D6UNqMUElLT6dG4awvO2EWBDhqU=
+		YZwZnrtH5x+X8DvXJgTrBxPAViQ=
 		</data>
 		<key>DocConfirmationViewController.nib</key>
 		<data>
-		qHvpUvs7AYrgKll+VDv7TLyoYnA=
+		iNqLNbGxkBRYt3hm8J63l0exwck=
 		</data>
 		<key>Headers/Amani-Swift.h</key>
 		<data>
-		hFFoueX7MpmZ2evUYpqpv3YcgMI=
+		G000o76XDn+apY4Nb0YpCI7qEiM=
 		</data>
 		<key>Headers/Amani.h</key>
 		<data>
@@ -42,67 +46,67 @@
 		</data>
 		<key>HomeViewController.nib</key>
 		<data>
-		QTbsdj5pCwFHdzg0ic+9R/5+Vs0=
+		MtkVPD2+d6sqMji5pYF5U65mLXg=
 		</data>
 		<key>IDCaptureViewController.nib</key>
 		<data>
-		yYffxpoli7QWpEW2XAgZM4AtHME=
+		Fr2z+TCKtc+e1v9wZVbloyg+kR0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		AxQ4eCGgq4EOSlPwx/mhk3QpQeg=
+		h7CNFvvOzlVB5EXC8YgJwjh3/gI=
 		</data>
 		<key>KYCStepTableViewCell.nib</key>
 		<data>
-		PgdHys0XqAI+IaozSgU90mW73yw=
+		vEL43MAiaYRC/CV6inTeqXJPnRs=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		CVaLZr/dI0s5BUZyNlJg1xcN9as=
+		Wfw0rrgxjc9sSyeNjfOsuZJ6rOo=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		CYmLpsS15kpL1r1tyuXrriBQ+T8=
+		c+z/tDlJfsGTPCa3cGdxqS3OvLo=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		22U+N1J2OEfkDRdi5kTsRoy0lwI=
+		mJDGo21jMIlbUV6W319MNtyodgk=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		CVaLZr/dI0s5BUZyNlJg1xcN9as=
+		Wfw0rrgxjc9sSyeNjfOsuZJ6rOo=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		CYmLpsS15kpL1r1tyuXrriBQ+T8=
+		c+z/tDlJfsGTPCa3cGdxqS3OvLo=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		22U+N1J2OEfkDRdi5kTsRoy0lwI=
+		mJDGo21jMIlbUV6W319MNtyodgk=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		8Pth2aGMkSNBa3lpewd0s4OnCkM=
+		qX2oFGZ5NV4fTMygMgxhBTZgLzI=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		WbF3gT7spXN2AN6f6EgJ1yxq0+I=
+		3DjeOf3oDXvEx7Os/dIKHqEsm0A=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		M8Cd/89G7Lb69p7t7VukmQ3ht6U=
+		31jp6gO657EugUIzMPoP8SWZDQE=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		8Pth2aGMkSNBa3lpewd0s4OnCkM=
+		qX2oFGZ5NV4fTMygMgxhBTZgLzI=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		WbF3gT7spXN2AN6f6EgJ1yxq0+I=
+		3DjeOf3oDXvEx7Os/dIKHqEsm0A=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		M8Cd/89G7Lb69p7t7VukmQ3ht6U=
+		31jp6gO657EugUIzMPoP8SWZDQE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -110,43 +114,47 @@
 		</data>
 		<key>NFCViewController.nib</key>
 		<data>
-		fsu1+Fzi8xa2v7/nGITTm1HLnh8=
+		JcUtbzP7+7lQuQ/HQ6HZzotGOaU=
 		</data>
 		<key>PersonalAddressDocumentViewController.nib</key>
 		<data>
-		BbF5f6Ci3yX2GQzRE0rKw6Do3Eg=
+		0/SEDc6DQ4Q8SC0EQNsF57/eQjE=
 		</data>
 		<key>PhysicalContractViewController.nib</key>
 		<data>
-		kH2cwQ0tyQnl8o7GuQPcYyu3Ta8=
+		GBitE4k6jk1YDiPKJO5ME2IKNO4=
+		</data>
+		<key>PoseEstimationCaptureView.nib</key>
+		<data>
+		Xx7N+asA5WjrpNL16KijdRfmu1M=
 		</data>
 		<key>SearchCityTableViewCell.nib</key>
 		<data>
-		ZBCKgaA+lI9sf7FriwV9Q0OSBwQ=
+		BfSp75Wd3zH+JxDk2g/d6tiWDG0=
 		</data>
 		<key>SelectCityViewController.nib/objects-14.0+.nib</key>
 		<data>
-		5466jnUv9QTVcFKH9K6cwvMWJ9c=
+		m8TPm43L6wV7AOo6K2P4U5w36Mw=
 		</data>
 		<key>SelectCityViewController.nib/runtime.nib</key>
 		<data>
-		uMvpQiyW1Az4LAR429LAYVS6Yjw=
+		s/OH4hzqspRVd1+CC44Lpe/l0Mw=
 		</data>
 		<key>SelfieCaptureViewController.nib</key>
 		<data>
-		hRNpyjaprFwoULQ+J3TSubpCUQk=
+		OTecppGexu+1WfTXCjCe2FGBbEc=
 		</data>
 		<key>SuccessViewController.nib/objects-14.0+.nib</key>
 		<data>
-		4t2gONcfL9TYVJOK7T5WzqrYbwI=
+		YHFkFuM8JRIKw9v1+jCOt/CztQ4=
 		</data>
 		<key>SuccessViewController.nib/runtime.nib</key>
 		<data>
-		8+VeKO5b92UjH/Ekf50UlOcpWhU=
+		9YRGn1Ml91dXRTVgE5zQgAzWfTE=
 		</data>
 		<key>TnCViewController.nib</key>
 		<data>
-		XrbLOplAKqANqOSXCbaQCHlNoUc=
+		yEyho71hZffeyMvzptE63gHMMkI=
 		</data>
 		<key>Turkish_ID.pem</key>
 		<data>
@@ -154,31 +162,39 @@
 		</data>
 		<key>UploadPhysicalContractViewController.nib</key>
 		<data>
-		kOCJg78p2wdNUXWMXwApxVr6d8s=
+		qWs/770XUhDfm8nvYRwoh0SwNJo=
 		</data>
 		<key>VersionSelectTableViewCell.nib</key>
 		<data>
-		H8hW4XMMvHuARrEJXtgxXBIwhSw=
+		NEnBuAdWK1urINWkEekek8bqEqY=
 		</data>
 		<key>VersionViewController.nib/objects-11.0+.nib</key>
 		<data>
-		kOiwkGHU6GANphlGsfnzK8Hat+Q=
+		Th1FxahyOdVhqgYUDKXKGyx3ioY=
 		</data>
 		<key>VersionViewController.nib/runtime.nib</key>
 		<data>
-		TNGzThKvRpdfC9UZOurXWIZY8Xg=
+		62Vo0eV1NrPRQVAMR2axyUjQmH0=
 		</data>
 		<key>WKWebView.nib</key>
 		<data>
-		3aeW0VF0jKo3j6RawoBWw9JLERY=
+		Us5jpD1PoQd3prRNVC9QWZzM6cw=
 		</data>
 		<key>WebView.nib</key>
 		<data>
-		ZCl5Gv/GEB5tkQedZNfmf8h1/K4=
+		oOEBGkTfaijwXjniJcHPQciZCzo=
 		</data>
 		<key>WebViewViewController.nib</key>
 		<data>
-		SnlohiRvQDRcxxSU1QdTstXKnGE=
+		RLJHAzX0KIxEZi/e5r34OuMeFQU=
+		</data>
+		<key>animation_first_selfie_instruction.json</key>
+		<data>
+		+H1L24He4hetTZsrfputEKfnyz0=
+		</data>
+		<key>animation_second_selfie_instruction.json</key>
+		<data>
+		dpdJYq6zoax7jjdjqixPsCW8Y8g=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
@@ -240,56 +256,63 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			n3+0juBlqiGY50qIKZwoMNBICBWZ3oSm10lfMt9JLIA=
+			aPjt/B5xj0ImhjzKw17TwzdIVbTNEKWFq3jBKQAP6BU=
 			</data>
 		</dict>
 		<key>AddressFormVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oNpOS7FtmqXAAJIG2N8h4NLbAmSxBwYchKpnfkWVvRA=
+			sRGZiQojNd12pqaZlAq8CSknjSr34tebTCycfJ7YPCU=
 			</data>
 		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UoUvuCAgiVXy7UaBarNI0f2nNXvrgpM2udv9lawHLUQ=
+			D+Gzy9K2Tx23GA6z24WxceyvzSkZsbvB7oLDMnJg3cg=
+			</data>
+		</dict>
+		<key>AutoSelfieCaptureView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VtG89yMsEhpDqDx2NxKm6p/WpHJiPq76vYlWPqA+yXU=
 			</data>
 		</dict>
 		<key>CityTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IBbcfUpn7yj7Vs4KzFqQqFFGW/2jKKaNeATo44Di8a8=
+			sqvSN+1sjyhl228wZFHJ4ZCokNrNWg1H7PQE2K8WPps=
 			</data>
 		</dict>
 		<key>DigitalContractViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vxH3dC9Bvp45iZo6K3KlRUNTTPyZqqRPMdo8bAFPVaI=
+			qlazO07fewRexMXQGbgZoC0Ao2aTFy6NBXTZeXmSUuA=
 			</data>
 		</dict>
 		<key>DigitalSignatureViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			x9jVfSn3B4vxoM6uDcMFdrNPhnnaO4e1ANGmGQ06/8c=
+			OduaQn65n2q8KOCnGFcTYbRMgO5uIpmdeXUXIv3ZPT4=
 			</data>
 		</dict>
 		<key>DocConfirmationViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lm2FJWp39sz7Nu7/mItYL772Ckzk/hGy+jJIkwR9VGs=
+			c75E/1iHe3USBQQo+DRohsykWES+rzZYAioA/GUMQRw=
 			</data>
 		</dict>
 		<key>Headers/Amani-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O7ZJM31nZtWrfprLwDhugNIrCeV4YiFetDZk1e8DN7Q=
+			9+jQzhCY0hJkr7riNTe4Dh3fjS3qjKqycQttcbtDP+E=
 			</data>
 		</dict>
 		<key>Headers/Amani.h</key>
@@ -303,105 +326,105 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hg50sG0YMVjY5DKw3gZdx9AbkwpuHjACrtOA7TV74/8=
+			QT67B6yj6eTgM4MX82bZewlZINzLX7zcMYN6St5r53A=
 			</data>
 		</dict>
 		<key>IDCaptureViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lvrEinX0h3pniW1ZlYhOrREC286yIqL/Z3mISRm/SqA=
+			q1pKV7zYeerTxFbjoDkOA8g2wTAB9x15V56flDtchLY=
 			</data>
 		</dict>
 		<key>KYCStepTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			B0paMguS1fKYbpsdi1qerMECgn5RA5XjCwI8hOLHfkA=
+			94qZVrvco11DWXsL3q1aQNnOpHlQnD2J3Ip9DxlqseU=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bPVH1VtjC3v2cKcgnWPk+VsdMyMmLOT1RPWKkpKfGdI=
+			K+Ovq1aioCIT8++ov8M9bIB2WIoxcxGAnbBvrSHQCDg=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u12mEIZS8ine+8VbgLMotegptLyOD4vzEjqBvcChwa8=
+			w4Kl4ngR0L1ImCk1F3A14JdO33o5/KnItYshc7mAUvc=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5qJWQRmXp5JlBueBSt8Bwjss0xtjD+W2E36iHfaux/4=
+			aIaqc/3Po/n3tAIGPSqZ6+2nOnaLEUHacd5yNm+VHEs=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bPVH1VtjC3v2cKcgnWPk+VsdMyMmLOT1RPWKkpKfGdI=
+			K+Ovq1aioCIT8++ov8M9bIB2WIoxcxGAnbBvrSHQCDg=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u12mEIZS8ine+8VbgLMotegptLyOD4vzEjqBvcChwa8=
+			w4Kl4ngR0L1ImCk1F3A14JdO33o5/KnItYshc7mAUvc=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5qJWQRmXp5JlBueBSt8Bwjss0xtjD+W2E36iHfaux/4=
+			aIaqc/3Po/n3tAIGPSqZ6+2nOnaLEUHacd5yNm+VHEs=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N7nW8jufSTHQwnGeZZzSCPLX8HfMCk0RbfLzGahQpMA=
+			glju+K6ICDgu2vJmUm8rjrc9LyQuN/UXenv61hnvCq8=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ojjI091on5gMmXRQWlhovJQSm44JdZEmPhg27c3is+w=
+			uSyWL/PmjkwE3PaQxfjiUTx6+bv9Mss4KZyalD+Il8I=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uy/ph4tTRsJnfPD05LymyH85t4OkfF/bw2HeAVSwqt4=
+			bG0LemBiqv/Of2Ymyset9Ye0F6YJ7MSZO9Dk+K5BwGw=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N7nW8jufSTHQwnGeZZzSCPLX8HfMCk0RbfLzGahQpMA=
+			glju+K6ICDgu2vJmUm8rjrc9LyQuN/UXenv61hnvCq8=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ojjI091on5gMmXRQWlhovJQSm44JdZEmPhg27c3is+w=
+			uSyWL/PmjkwE3PaQxfjiUTx6+bv9Mss4KZyalD+Il8I=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uy/ph4tTRsJnfPD05LymyH85t4OkfF/bw2HeAVSwqt4=
+			bG0LemBiqv/Of2Ymyset9Ye0F6YJ7MSZO9Dk+K5BwGw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -415,70 +438,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vw/C+CpG4OFpRYqvu2yb62dk3a7xwetw/1lJF2YkDG0=
+			r9PnrYEjeRCRzRceTuldG+LkNBO+5d9iMlgPuNLp3H4=
 			</data>
 		</dict>
 		<key>PersonalAddressDocumentViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lVkNPWcnibQA7nGHXGCEvRt62hOjLmwc6PM4xrmlPqk=
+			qy65DCt098+MQTSN8UKklEu7gsENBM/Upd6ZCuk6Y8M=
 			</data>
 		</dict>
 		<key>PhysicalContractViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mU++2jTTyI1QCHEO24ZmVVwpVAtnKNmmaVCwsKBv3+k=
+			Z7TWqXRHcW3vs6sHdqG3Aq4IjMJxqTXxdOBsfDMudBA=
+			</data>
+		</dict>
+		<key>PoseEstimationCaptureView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			O2j9V9UCAr47qqY5KnR3pXXGiyaxIV1CDSYvAXOpDIE=
 			</data>
 		</dict>
 		<key>SearchCityTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hcm5dDXkjuz1NeWFAwvovN77fIMg/230xEv8VR6qM+c=
+			qSX5fU39F8JZLcIWPY2XgaORgcnuah7kHtqHbAhdetQ=
 			</data>
 		</dict>
 		<key>SelectCityViewController.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qY/nVaI2iGctZZh9Def5TMpYboZrRxg9iL8F35Av/Xc=
+			LNTNJdu1d1GSR/j3r3SsZEsgaWuuxbYgtv0F+CaSqO4=
 			</data>
 		</dict>
 		<key>SelectCityViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S5f2Y1/K+BHDms3QIfXKUnY3vmBK1bfnJQHFt5DCI9o=
+			uN3zWfg32cra/30x7A49Pzsj3tFI9ZngESh5IT1BlhI=
 			</data>
 		</dict>
 		<key>SelfieCaptureViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			THcf1eSWGNRtltUqC1n+SoERm33fetpfjVrr2p1wcJg=
+			B0RCxSLvjfherhyc4cLTOctuQ2uKLgooAXvMwxJBNpE=
 			</data>
 		</dict>
 		<key>SuccessViewController.nib/objects-14.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			o+tmFgyJs+XD7V9UkGmnT5KE2tdqtLM5w4yqW/q7Kd0=
+			He+ltjTm/CUX0MXo9URw9W+UO3kzMAJRo86gqZ1wZd0=
 			</data>
 		</dict>
 		<key>SuccessViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eaYeWwOPdrqkbcuEJHPZGplmDJLl7vCdqt35dmGwtx0=
+			lJTHszV5rk46LZFYVfnmuR0Ji3jwO7/hY9UWDw3HtLM=
 			</data>
 		</dict>
 		<key>TnCViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3e/1xT83jYGGaHBmqo4IId+V4JeQcxtpnjqqavzhtuY=
+			QckFHciCry15sEJhUXPvdFb98hAvs+/1YraVHFLyk1Y=
 			</data>
 		</dict>
 		<key>Turkish_ID.pem</key>
@@ -492,49 +522,63 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			b5ijw/KeMjV0F3imALhyOncFpwhFejC0MXAYbqQU7Bg=
+			KE74/SmVen4cyIN3uLf9nrHZqiBuZG567CkgismI+Xc=
 			</data>
 		</dict>
 		<key>VersionSelectTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OURkGyCU2oLzWMeGjzz465GH3qP8AlU2O6RqVTyrR9Y=
+			HkXd0lvu3kCAzEVyAwLTFyzJJm/1zTjIhJP704/1qxg=
 			</data>
 		</dict>
 		<key>VersionViewController.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Gyh8TJru/HSlTV0WFycmaWbthabDkCuV/g+SNaW7z60=
+			mszuKKgz1CC5EF3RZLJOgYsSsWu8pJTpjcm6SMYXaSw=
 			</data>
 		</dict>
 		<key>VersionViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BmypE/RVTsvqtv1eM5TOJ5+OYgmEfyKM0fT2vryyVsw=
+			5RuZkLO1t2GGZ4fabMflerlT+nk2+3U1CY2fiQ1IrVA=
 			</data>
 		</dict>
 		<key>WKWebView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dZYYHeWZ2hCEj6YGXdaHRnzXtaEDOo9B3isafWO7obc=
+			M+RyIjdxiu+PH1C5TJ8c1oN0oIs4bzDghTnrWaJrd2I=
 			</data>
 		</dict>
 		<key>WebView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h/4tWNjzurW033TWd9eicfwmn8OrOJlEPL9tx8b1X6Q=
+			h5qEI6N9d8cXAbXSM6TNyYji1yhwdmeP02A6ql+th78=
 			</data>
 		</dict>
 		<key>WebViewViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MY018gD9Nh/knnk2vmkTFUYeLyjbZaW3CZOWgowop+8=
+			5SE2rrqqGBxqtARVcW0IqBxV16bJ5Qto3JJLosaSR+o=
+			</data>
+		</dict>
+		<key>animation_first_selfie_instruction.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uY1wt1FEaBgLAFl+K0NDpYZ+QQHMPXow5ogJBQ0HFr4=
+			</data>
+		</dict>
+		<key>animation_second_selfie_instruction.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cEgnfnLL4lOM5MZmxAB2tD+ZWkvr85n4qj42093U+ho=
 			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
