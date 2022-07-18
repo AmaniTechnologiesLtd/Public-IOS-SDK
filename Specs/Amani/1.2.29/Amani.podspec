@@ -20,9 +20,9 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => "#{s.version}"}
  #s.dependency 'Alamofire', '>=5.2'
   # s.dependency 'SwiftLint'
-  s.dependency 'IQKeyboardManagerSwift'
-  s.dependency "lottie-ios"
-  s.dependency 'OpenSSL-Universal'
+  s.dependency 'IQKeyboardManagerSwift',"~>6"
+  s.dependency "lottie-ios","~>3"
+  s.dependency 'OpenSSL-Universal',"~>1.1.1400"
   s.xcconfig          = { 'OTHER_LDFLAGS' => '-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit'}
   s.ios.deployment_target = '10.0'
   s.vendored_frameworks = 'Amani.xcframework'
