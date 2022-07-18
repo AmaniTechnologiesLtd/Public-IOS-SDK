@@ -12,8 +12,7 @@
   "summary": "Amani-SDK.",
   "description": "The Amani Software Development kit (SDK) provides you complete steps to perform eKYC.",
   "source": {
-    "git": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git",
-    "tag": "1.2.29"
+    "git": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git"
   },
   "documentation_url": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK",
   "platforms": {
