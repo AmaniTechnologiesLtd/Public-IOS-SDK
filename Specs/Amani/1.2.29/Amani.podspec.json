@@ -3,7 +3,7 @@
   "version": "1.2.29",
   "license": {
     "type": "Copyright",
-    "text": "\t\t\t\t\t\t\t\t\t\t\t\t\t\tCopyright 2022\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tAmani Ai AŞ. .\n"
+    "text": "\t\t\t\t\t\t\t\t\t\t\t\t\t\tCopyright 2022\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tAmani Ai AŞ.\n"
   },
   "homepage": "http://www.amani.ai/",
   "authors": {
@@ -21,7 +21,7 @@
   },
   "vendored_frameworks": "Amani.xcframework",
   "pod_target_xcconfig": {
-    "OTHER_LDFLAGS": "-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit",
+    "OTHER_LDFLAGS": "-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit"
   },
   "dependencies": {
     "IQKeyboardManagerSwift": [
