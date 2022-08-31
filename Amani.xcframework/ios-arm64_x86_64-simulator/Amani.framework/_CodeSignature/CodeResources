@@ -54,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		h7CNFvvOzlVB5EXC8YgJwjh3/gI=
+		ayH2NgxaLHyVtySfScXGcxI6j20=
 		</data>
 		<key>KYCStepTableViewCell.nib</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mJDGo21jMIlbUV6W319MNtyodgk=
+		0hjWRTVsUbubMJ2mUsb0LJ2MpjU=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		mJDGo21jMIlbUV6W319MNtyodgk=
+		0hjWRTVsUbubMJ2mUsb0LJ2MpjU=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		31jp6gO657EugUIzMPoP8SWZDQE=
+		Gok0vE1g5Z/Y9xLnnsE9Qi15OAI=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		31jp6gO657EugUIzMPoP8SWZDQE=
+		Gok0vE1g5Z/Y9xLnnsE9Qi15OAI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -361,7 +361,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aIaqc/3Po/n3tAIGPSqZ6+2nOnaLEUHacd5yNm+VHEs=
+			0vZ5HHj4j59HdY3iuFF1fxJhe2lLO2TcGLJ8AiRFY4I=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64.swiftdoc</key>
@@ -382,7 +382,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aIaqc/3Po/n3tAIGPSqZ6+2nOnaLEUHacd5yNm+VHEs=
+			0vZ5HHj4j59HdY3iuFF1fxJhe2lLO2TcGLJ8AiRFY4I=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -403,7 +403,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bG0LemBiqv/Of2Ymyset9Ye0F6YJ7MSZO9Dk+K5BwGw=
+			K3El9D7mEwTkg1557fEkV+i76LTY+UYndEdsWYz/MN4=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftdoc</key>
@@ -424,7 +424,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bG0LemBiqv/Of2Ymyset9Ye0F6YJ7MSZO9Dk+K5BwGw=
+			K3El9D7mEwTkg1557fEkV+i76LTY+UYndEdsWYz/MN4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
