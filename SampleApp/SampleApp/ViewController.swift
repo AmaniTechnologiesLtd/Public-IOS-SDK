@@ -47,7 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if #available(iOS 11, *) {
             let amaniSDK = AmaniSDK.sharedInstance
  
-        amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer)
+        amaniSDK.set(server: serverURL, token: customerToken, customer: customer)
             /*
              if dont want to use location permissions please provide with useGeoLocation parameter
              amaniSDK.set(server: "SERVER_URL", token: "TOKEN", customer: customer,useGeoLocation: false)
