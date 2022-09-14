@@ -1,0 +1,38 @@
+{
+  "name": "Amani",
+  "version": "1.2.31",
+  "license": {
+    "type": "Copyright",
+    "text": "\t\t\t\t\t\t\t\t\t\t\t\t\t\tCopyright 2022\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tAmani Ai AŞ.\n"
+  },
+  "swift_versions": "5.0",
+  "requires_arc": true,
+  "homepage": "http://www.amani.ai/",
+  "authors": {
+    "Amani Ai": "admin@amani.ai"
+  },
+  "summary": "Amani-SDK.",
+  "description": "The Amani Software Development kit (SDK) provides you complete steps to perform eKYC.",
+  "source": {
+    "git": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git"
+  },
+  "documentation_url": "https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "vendored_frameworks": "Amani.xcframework",
+  "pod_target_xcconfig": {
+    "OTHER_LDFLAGS": "-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit"
+  },
+  "dependencies": {
+    "IQKeyboardManagerSwift": [
+      "~> 6.5.0"
+    ],
+    "lottie-ios": [
+      "~> 3.3.0"
+    ],
+    "OpenSSL-Universal": [
+      "1.1.1100"
+    ]
+  }
+}

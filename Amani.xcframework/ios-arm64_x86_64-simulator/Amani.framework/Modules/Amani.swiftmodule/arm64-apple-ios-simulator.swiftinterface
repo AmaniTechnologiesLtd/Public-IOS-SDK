@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Amani
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import Accelerate
 @_exported import Amani
@@ -24,6 +25,7 @@ import UIKit
 import Vision
 import WebKit
 import _Concurrency
+import _StringProcessing
 public struct CustomerRequestModel : Swift.Codable {
   public var name: Swift.String?
   public var email: Swift.String?
@@ -136,12 +138,12 @@ open class iProgressHUD {
   final public let modalView: UIKit.UIImageView
   final public let boxView: UIKit.UIImageView!
   final public let captionView: UIKit.UILabel!
-  open var indicatorSize: CoreGraphics.CGFloat
-  open var alphaModal: CoreGraphics.CGFloat
-  open var alphaBox: CoreGraphics.CGFloat
-  open var boxSize: CoreGraphics.CGFloat
-  open var boxCorner: CoreGraphics.CGFloat
-  open var captionDistance: CoreGraphics.CGFloat
+  open var indicatorSize: CoreFoundation.CGFloat
+  open var alphaModal: CoreFoundation.CGFloat
+  open var alphaBox: CoreFoundation.CGFloat
+  open var boxSize: CoreFoundation.CGFloat
+  open var boxCorner: CoreFoundation.CGFloat
+  open var captionDistance: CoreFoundation.CGFloat
   open var isShowCaption: Swift.Bool
   open var isShowModal: Swift.Bool
   open var isShowBox: Swift.Bool
@@ -152,7 +154,7 @@ open class iProgressHUD {
   open var boxColor: UIKit.UIColor
   open var captionColor: UIKit.UIColor
   open var indicatorColor: UIKit.UIColor
-  open var captionSize: CoreGraphics.CGFloat
+  open var captionSize: CoreFoundation.CGFloat
   open var delegete: Amani.iProgressHUDDelegete?
   public init()
   public init(style: Amani.NVActivityIndicatorType)
@@ -190,7 +192,7 @@ public struct NviModel : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 final public class ActivityData {
-  public init(size: CoreGraphics.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, messageSpacing: CoreGraphics.CGFloat? = nil, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil)
+  public init(size: CoreFoundation.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, messageSpacing: CoreFoundation.CGFloat? = nil, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreFoundation.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class NVActivityIndicatorPresenter {
@@ -397,7 +399,7 @@ public class ChipAuthenticationInfo : Amani.SecurityInfo {
 }
 extension UIKit.UINavigationController {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
 }
 @available(iOS 13, macOS 10.15, *)
@@ -473,17 +475,17 @@ public enum NVActivityIndicatorType : Swift.Int {
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_TYPE: Amani.NVActivityIndicatorType
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_COLOR: UIKit.UIColor
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_PADDING: CoreGraphics.CGFloat
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_SIZE: CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_PADDING: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_SIZE: CoreFoundation.CGSize
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
   @_Concurrency.MainActor(unsafe) final public var type: Amani.NVActivityIndicatorType
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var color: UIKit.UIColor
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var padding: CoreGraphics.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var padding: CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) final public var animating: Swift.Bool {
     get
   }
@@ -491,13 +493,13 @@ public enum NVActivityIndicatorType : Swift.Int {
     get
   }
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil)
-  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreGraphics.CGSize {
-    @_Concurrency.MainActor(unsafe) @objc get
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreFoundation.CGFloat? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
   }
-  @_Concurrency.MainActor(unsafe) @objc override final public var bounds: CoreGraphics.CGRect {
-    @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
+  @_Concurrency.MainActor(unsafe) @objc override final public var bounds: CoreFoundation.CGRect {
+    @objc get
+    @objc set
   }
   @_Concurrency.MainActor(unsafe) final public func startAnimating()
   @_Concurrency.MainActor(unsafe) final public func stopAnimating()
@@ -675,7 +677,7 @@ public class CardAccess {
 public protocol NVActivityIndicatorViewable {
 }
 extension Amani.NVActivityIndicatorViewable where Self : UIKit.UIViewController {
-  public func startAnimating(_ size: CoreGraphics.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil)
+  public func startAnimating(_ size: CoreFoundation.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreFoundation.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil)
   public func stopAnimating()
 }
 public enum SecureMessagingSupportedAlgorithms {
