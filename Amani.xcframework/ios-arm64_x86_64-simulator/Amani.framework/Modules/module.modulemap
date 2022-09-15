@@ -6,6 +6,6 @@ framework module Amani {
 }
 
 module Amani.Swift {
-  header "Amani-Swift.h"
-  requires objc
+    header "Amani-Swift.h"
+    requires objc
 }
