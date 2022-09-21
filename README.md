@@ -136,11 +136,16 @@ class ViewController: UIViewController {
 
 Install using [CocoaPods](http://cocoapods.org) by adding this line to your Podfile:
 
+Add sdk source to cocoapods 
+
+```ruby
+source "https://github.com/AmaniTechnologiesLtd/Mobile_SDK_Repo"
+source "https://github.com/CocoaPods/Specs"
+```
 
 ```ruby
 use_frameworks!
-  pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git'
-  #pod 'Amani', :git => 'https://github.com/AmaniTechnologiesLtd/Public-IOS-SDK.git', :tag => '1.2.19'
+  pod 'Amani'
 ```
 also add after last end statement of podfile 
 
