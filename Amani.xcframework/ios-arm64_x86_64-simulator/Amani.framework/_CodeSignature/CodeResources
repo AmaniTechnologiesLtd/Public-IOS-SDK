@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/Amani-Swift.h</key>
 		<data>
-		G000o76XDn+apY4Nb0YpCI7qEiM=
+		1DIStbNnbo2roGkoCxvmRoFfoS4=
 		</data>
 		<key>Headers/Amani.h</key>
 		<data>
@@ -54,59 +54,63 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		94paneNNYEVDNQJctyn6Skq4egg=
+		llrQgowTfWAZmg1aP77TZaPF8FI=
 		</data>
 		<key>KYCStepTableViewCell.nib</key>
 		<data>
 		vEL43MAiaYRC/CV6inTeqXJPnRs=
 		</data>
+		<key>LICENSE.md</key>
+		<data>
+		U9GCgHDp382DPWRp9iO0ATm+FV4=
+		</data>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Wfw0rrgxjc9sSyeNjfOsuZJ6rOo=
+		KdRq6IteTLkryqEVKiwwwsfRSic=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		c+z/tDlJfsGTPCa3cGdxqS3OvLo=
+		HAu0fOsAlLMRYPQNio/4SSydHgQ=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8tHOKthJ0UbVnVLT101qokFlug8=
+		g+9n8gRFzVuRyzwB7O8iAeQ93sE=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		Wfw0rrgxjc9sSyeNjfOsuZJ6rOo=
+		KdRq6IteTLkryqEVKiwwwsfRSic=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		c+z/tDlJfsGTPCa3cGdxqS3OvLo=
+		HAu0fOsAlLMRYPQNio/4SSydHgQ=
 		</data>
 		<key>Modules/Amani.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		8tHOKthJ0UbVnVLT101qokFlug8=
+		g+9n8gRFzVuRyzwB7O8iAeQ93sE=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		qX2oFGZ5NV4fTMygMgxhBTZgLzI=
+		w9loO7TeJJBK5fnLIFGHYrVzr/Q=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		3DjeOf3oDXvEx7Os/dIKHqEsm0A=
+		5cDlyh8KFwfqQy537BJDOi29X64=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0A7HP7QIVyMoYxKN5LQ319HCtN8=
+		LF0A85gJCA27BVJ1JyDPqLUb6s0=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		qX2oFGZ5NV4fTMygMgxhBTZgLzI=
+		w9loO7TeJJBK5fnLIFGHYrVzr/Q=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		3DjeOf3oDXvEx7Os/dIKHqEsm0A=
+		5cDlyh8KFwfqQy537BJDOi29X64=
 		</data>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		0A7HP7QIVyMoYxKN5LQ319HCtN8=
+		LF0A85gJCA27BVJ1JyDPqLUb6s0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -127,6 +131,10 @@
 		<key>PoseEstimationCaptureView.nib</key>
 		<data>
 		Xx7N+asA5WjrpNL16KijdRfmu1M=
+		</data>
+		<key>README.md</key>
+		<data>
+		7uY1IBuOtKjSXAP+bR0SjQK7uuQ=
 		</data>
 		<key>SearchCityTableViewCell.nib</key>
 		<data>
@@ -312,7 +320,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9+jQzhCY0hJkr7riNTe4Dh3fjS3qjKqycQttcbtDP+E=
+			kqZmL4sqU6ffqhPCxrCUsFaoegXB3ej/GxM//Yp656c=
 			</data>
 		</dict>
 		<key>Headers/Amani.h</key>
@@ -343,88 +351,95 @@
 			94qZVrvco11DWXsL3q1aQNnOpHlQnD2J3Ip9DxlqseU=
 			</data>
 		</dict>
+		<key>LICENSE.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dgBdzcgCuhy9HUzI/Rizn8t9G9RPGIaVajjpr0WsUis=
+			</data>
+		</dict>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K+Ovq1aioCIT8++ov8M9bIB2WIoxcxGAnbBvrSHQCDg=
+			KLyyu75lyuxxPbdnPwfjDcBxpbzEi+L1B3S1DBN1rQ8=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w4Kl4ngR0L1ImCk1F3A14JdO33o5/KnItYshc7mAUvc=
+			8a9bRwJYyDYqAbhupYUYuidzCdbLo456OztwNy32+9o=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T4jzP2RY8wL2tAzOStSP41QBi5FkRiwX8fGQ0DrFEEM=
+			iVQ6+pSx/KIYgQ863qSnlFdKdhOvzr8AxE8o+1DSFns=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K+Ovq1aioCIT8++ov8M9bIB2WIoxcxGAnbBvrSHQCDg=
+			KLyyu75lyuxxPbdnPwfjDcBxpbzEi+L1B3S1DBN1rQ8=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w4Kl4ngR0L1ImCk1F3A14JdO33o5/KnItYshc7mAUvc=
+			8a9bRwJYyDYqAbhupYUYuidzCdbLo456OztwNy32+9o=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T4jzP2RY8wL2tAzOStSP41QBi5FkRiwX8fGQ0DrFEEM=
+			iVQ6+pSx/KIYgQ863qSnlFdKdhOvzr8AxE8o+1DSFns=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			glju+K6ICDgu2vJmUm8rjrc9LyQuN/UXenv61hnvCq8=
+			caPQpIOtpxIyiBKMBQVpeNJbGTDg6K6p1WgDAKJxPYY=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uSyWL/PmjkwE3PaQxfjiUTx6+bv9Mss4KZyalD+Il8I=
+			1ag8MwFUTT5JhqYnqEzZjtMld+iqenzA9nwDC0L5JVQ=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OwfTvI1VRxyn0AIJydNIyuZm0uAIGQPn/M2uiHLJkes=
+			O5GcVqSBPZjO03J9lfwSqANidP/iJpBV8q/MXaqUoX4=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			glju+K6ICDgu2vJmUm8rjrc9LyQuN/UXenv61hnvCq8=
+			caPQpIOtpxIyiBKMBQVpeNJbGTDg6K6p1WgDAKJxPYY=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uSyWL/PmjkwE3PaQxfjiUTx6+bv9Mss4KZyalD+Il8I=
+			1ag8MwFUTT5JhqYnqEzZjtMld+iqenzA9nwDC0L5JVQ=
 			</data>
 		</dict>
 		<key>Modules/Amani.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OwfTvI1VRxyn0AIJydNIyuZm0uAIGQPn/M2uiHLJkes=
+			O5GcVqSBPZjO03J9lfwSqANidP/iJpBV8q/MXaqUoX4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -460,6 +475,13 @@
 			<key>hash2</key>
 			<data>
 			O2j9V9UCAr47qqY5KnR3pXXGiyaxIV1CDSYvAXOpDIE=
+			</data>
+		</dict>
+		<key>README.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PCaam2hba2gbB4A4Pc4r2Bm1WT7BV2o9pbYkAMWmB74=
 			</data>
 		</dict>
 		<key>SearchCityTableViewCell.nib</key>
