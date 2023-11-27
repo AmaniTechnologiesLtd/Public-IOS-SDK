@@ -6,3 +6,5 @@ SampleApp/Pods/*
 SampleApp/SDK/*
 .DS_Store
 SampleApp/SampleApp/Creds.swift
+Amani.xcframework/*
+SampleApp/Build/*
